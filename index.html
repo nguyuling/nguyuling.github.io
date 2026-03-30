@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngu Yu Ling | Bioinformatics Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --maroon: #800020; /* Matches your resume accent */
+            --light-bg: #f4f4f4; /* Matches your resume sidebar */
+            --text-dark: #333;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin: 0;
+            background-color: var(--white);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--maroon);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 80px 10%;
+            background: var(--light-bg);
+        }
+
+        .hero-text { flex: 1; }
+        .hero-img { flex: 1; text-align: center; }
+        
+        .hero-img img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 5px solid var(--maroon);
+            object-fit: cover;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero h2 { color: var(--maroon); font-weight: 400; margin-top: 0; }
+
+        /* Section Styling */
+        section { padding: 60px 10%; }
+        h3 { 
+            border-bottom: 2px solid var(--maroon); 
+            display: inline-block; 
+            margin-bottom: 30px; 
+        }
+
+        /* Skills Grid */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--maroon);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Experience/Education Timeline */
+        .item { margin-bottom: 20px; }
+        .item-title { font-weight: bold; color: var(--maroon); }
+        .item-date { font-style: italic; font-size: 0.9rem; color: #666; }
+
+        footer {
+            background: var(--maroon);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; }
+            .hero-img { order: -1; margin-bottom: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">NGU YU LING</div>
+    <div class="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="hero-text">
+        <h1>Hi, I'm Yu Ling</h1>
+        <h2>Computer Science (Bioinformatics) Student</h2>
+        <p>A devoted and disciplined student passionate about the intersection of biology and computing fields, contributing to the advancement of cancer research.</p>
+        <a href="mailto:nguyuling@gmail.com" style="background: var(--maroon); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Get In Touch</a>
+    </div>
+    <div class="hero-img">
+        <img src="profile.jpg" alt="Ngu Yu Ling">
+    </div>
+</header>
+
+<section id="about">
+    <h3>About Me</h3>
+    <p>Currently pursuing my Bachelor's at <strong>Universiti Teknologi Malaysia (UTM)</strong>. I bridge the gap between complex biological data and computational analysis. My background in Life Sciences [cite: 10] combined with modern Data Science tools allows me to interpret genomics and gene expression patterns effectively[cite: 28].</p>
+</section>
+
+<section id="skills" style="background: var(--light-bg);">
+    <h3>Technical Expertise</h3>
+    <div class="skills-container">
+        <div class="skill-card">
+            <h4>Programming</h4>
+            <p>Python (Pandas, NumPy, Scikit-Learn), SQL, C++, Java, HTML/CSS[cite: 21, 22].</p>
+        </div>
+        <div class="skill-card">
+            <h4>Machine Learning</h4>
+            <p>CNNs, Random Forest, and Polynomial Regression for predictive modeling[cite: 26].</p>
+        </div>
+        <div class="skill-card">
+            <h4>Bioinformatics</h4>
+            <p>Analyzing genomics, biomarkers, and complex biological datasets[cite: 28].</p>
+        </div>
+    </div>
+</section>
+
+<section id="education">
+    <h3>Education & Leadership</h3>
+    <div class="item">
+        <div class="item-title">Bachelor of Computer Science (Bioinformatics) - UTM</div>
+        <div class="item-date">2023 - 2027 | Current CGPA: 3.78 [cite: 8, 9]</div>
+    </div>
+    <div class="item">
+        <div class="item-title">Student Representative Council (MPP) - UTM</div>
+        <div class="item-date">2024 - 2025 [cite: 37]</div>
+        <p>HOD of Welfare Department and Faculty of Computing Representative[cite: 38, 39].</p>
+    </div>
+</section>
+
+<footer>
+    <p>Let's Connect</p>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/nguyuling/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:nguyuling@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p style="font-size: 0.8rem; margin-top: 20px;">&copy; 2026 Ngu Yu Ling. Built with GitHub Pages.</p>
+</footer>
+
+</body>
+</html>
