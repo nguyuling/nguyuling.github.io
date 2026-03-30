@@ -147,6 +147,50 @@
             color: var(--text-dark);
         }
 
+        /* Timeline Styling */
+        #cocurriculum .item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 40px;
+        }
+
+        #cocurriculum .item::before {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: var(--maroon);
+            border: 3px solid var(--light-bg);
+            border-radius: 50%;
+            box-shadow: inset 0 0 0 3px var(--maroon);
+        }
+
+        #cocurriculum::before {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 60px;
+            bottom: 0;
+            width: 2px;
+            background: #ccc;
+            z-index: -1;
+        }
+
+        #cocurriculum {
+            position: relative;
+        }
+
+        #cocurriculum .item-date {
+            position: absolute;
+            left: -50px;
+            top: 0;
+            font-weight: bold;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+
         footer {
             background: var(--maroon);
             color: white;
@@ -242,9 +286,9 @@
 <section id="cocurriculum" style="padding: 60px 10%; background: var(--light-bg);">
     <h3>Co-curriculum</h3>
     <div class="item">
+        <div class="item-date">2024 - 2025</div>
         <div class="item-title">Exco & Faculty Representative</div>
         <div class="item-institution">Student Representative Council (MPP) 2024/2025</div>
-        <div class="item-date">2024 - 2025</div>
         <ul>
             <li>HOD Welfare Department, coordinated welfare initiatives, and addressed concerns regarding accommodation, food security and campus facilities.</li>
             <li>Faculty of Computing Representative, oversaw faculty program approval in alignment with Student Empowerment framework.</li>
@@ -252,18 +296,18 @@
         </ul>
     </div>
     <div class="item">
+        <div class="item-date">2024</div>
         <div class="item-title">Active Member</div>
         <div class="item-institution">Persatuan Mahasiswa Sains Komputer (PERSAKA)</div>
-        <div class="item-date">2024</div>
         <ul>
             <li>Committee member, Artificial Intelligence & Robotics 2024 & Sukan Sains Komputer 2024.</li>
             <li>Emcee, UTMxHackathon 2024.</li>
         </ul>
     </div>
     <div class="item">
+        <div class="item-date">2024</div>
         <div class="item-title">Deputy Secretary</div>
         <div class="item-institution">Friends of UTM Library (FOLY) 2023/2024</div>
-        <div class="item-date">2024</div>
         <ul>
             <li>Panel, Read & Relax Series.</li>
         </ul>
