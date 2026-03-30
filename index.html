@@ -150,41 +150,43 @@
         /* Timeline Styling */
         #cocurriculum {
             position: relative;
+            padding-left: 0;
         }
 
         #cocurriculum::after {
             content: "";
             position: absolute;
-            left: 23px;
-            top: 100px;
-            bottom: 0;
+            left: 11px;
+            top: 50px;
+            bottom: -50px;
             width: 2px;
             background: #ddd;
+            z-index: 0;
         }
 
         #cocurriculum .item {
             position: relative;
             padding-left: 80px;
             margin-bottom: 50px;
+            z-index: 1;
         }
 
         #cocurriculum .item::before {
             content: "";
             position: absolute;
             left: 0;
-            top: 5px;
+            top: 0;
             width: 24px;
             height: 24px;
             background: var(--maroon);
-            border: 4px solid var(--light-bg);
+            border: 3px solid var(--light-bg);
             border-radius: 50%;
-            box-shadow: 0 0 0 2px #ddd;
             z-index: 2;
         }
 
         #cocurriculum .item-date {
             position: absolute;
-            left: -60px;
+            left: -70px;
             top: 0;
             font-weight: bold;
             font-style: italic;
