@@ -96,11 +96,13 @@
         .two-column-section {
             display: flex;
             gap: 40px;
+            flex-wrap: nowrap;
         }
 
         .two-column-section section {
-            flex: 1;
-            padding: 0;
+            flex: 1 1 50%;
+            padding: 0 !important;
+            min-width: 0;
         }
 
         .two-column-section h3 { margin-top: 0; }
