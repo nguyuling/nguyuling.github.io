@@ -93,29 +93,6 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        /* Two-Column Layout */
-        .two-column-section {
-            display: flex;
-            gap: 40px;
-            flex-wrap: nowrap;
-        }
-
-        .two-column-section section {
-            flex: 1 1 50%;
-            padding: 0 !important;
-            min-width: 0;
-        }
-
-        .two-column-section section:nth-child(1) {
-            flex: 0 0 40%;
-        }
-
-        .two-column-section section:nth-child(2) {
-            flex: 0 0 60%;
-        }
-
-        .two-column-section h3 { margin-top: 0; }
-
         /* Education Timeline */
         .item { margin-bottom: 20px; }
         .item-title { font-weight: bold; color: var(--maroon); text-transform: uppercase;}
@@ -210,7 +187,6 @@
         @media (max-width: 768px) {
             .hero { flex-direction: column; text-align: center; }
             .hero-img { order: -1; margin-bottom: 20px; }
-            .two-column-section { flex-direction: column; gap: 0; }
         }
     </style>
 </head>
@@ -238,9 +214,7 @@
     </div>
 </header>
 
-<div class="two-column-section" style="padding: 60px 10%;">
-
-<section id="education">
+<section id="education" style="padding: 60px 10%;">
     <h3>Education</h3>
     <div class="item">
         <div class="item-title">Bachelor of Computer Science (Bioinformatics)</div>
@@ -262,7 +236,7 @@
     </div>
 </section>
 
-<section id="skills">
+<section id="skills" style="padding: 60px 10%;">
     <h3>Technical Expertise</h3>
     <div class="skills-container">
         <div class="skill-card">
@@ -283,8 +257,6 @@
         </div>
     </div>
 </section>
-
-</div>
 
 <section id="cocurriculum" style="padding: 60px 10%; background: var(--light-bg);">
     <h3>Co-curriculum</h3>
