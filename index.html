@@ -244,15 +244,13 @@
         
         .item-institution { 
             font-style: italic; 
-            font-size: 1rem; 
-            color: var(--maroon); 
-            margin: 5px 0; 
-            font-weight: 500;
-            transition: all 0.3s ease;
+            font-size: 0.9rem; 
+            color: var(--text-light-gray);
+            margin-bottom: 8px;
         }
 
         .item:hover .item-institution {
-            color: #FFE066;
+            color: var(--maroon);
         }
 
         .item-grade { 
@@ -263,15 +261,10 @@
         }
         
         .item-date { 
-            font-weight: bold; 
-            font-size: 0.9rem; 
-            color: var(--maroon); 
+            font-size: 0.85rem; 
+            color: var(--text-light-gray);
             margin-bottom: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .item:hover .item-date {
-            font-size: 1rem;
+            font-weight: 500;
         }
         
         .item ul {
@@ -298,93 +291,7 @@
             margin-top: 30px;
         }
 
-        .project-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: 1px solid rgba(252, 191, 73, 0.2);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card-header {
-            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
-            padding: 20px;
-            border-bottom: 2px solid var(--maroon);
-            min-height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .project-card-header h4 {
-            color: var(--white);
-            font-size: 1.3rem;
-            margin: 0;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .project-card-content {
-            padding: 25px;
-            flex-grow: 1;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
-
-        .project-tag {
-            background: rgba(252, 191, 73, 0.15);
-            color: var(--maroon);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border: 1px solid rgba(252, 191, 73, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-
-        .project-date {
-            font-size: 0.85rem;
-            color: var(--text-light-gray);
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-
-        .project-description {
-            color: var(--text-light-gray);
-            line-height: 1.6;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-        }
-
-        .project-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 15px 40px rgba(252, 191, 73, 0.25);
-            border-color: var(--maroon);
-        }
-
-        .project-card:hover .project-card-header {
-            background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
-        }
-
-        /* Certification Cards Container */
-        .certification-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-top: 30px;
-        }
-
+        .project-card,
         .certification-card {
             background: var(--card-bg);
             border-radius: 12px;
@@ -396,6 +303,112 @@
             display: flex;
             flex-direction: column;
         }
+
+        .project-card-header,
+        .certification-card-header {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            padding: 20px;
+            border-bottom: 2px solid var(--maroon);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-card-header h4,
+        .certification-card-header h4 {
+            color: var(--white);
+            margin: 0;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-card-header h4 {
+            font-size: 1.3rem;
+        }
+
+        .certification-card-header h4 {
+            font-size: 1.1rem;
+            line-height: 1.3;
+        }
+
+        .project-card-content,
+        .certification-card-content {
+            padding: 25px;
+        }
+
+        .certification-card-content {
+            display: flex;
+            flex-direction: column;
+        }
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 8px;
+            margin-bottom: 15px;
+            justify-content: center;
+        }
+
+        .certification-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+            justify-content: center;
+        }
+
+        .project-tag,
+        .certification-tag {
+            background: rgba(252, 191, 73, 0.15);
+            color: var(--maroon);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            border: 1px solid rgba(252, 191, 73, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        .project-date,
+        .certification-date {
+            font-size: 0.85rem;
+            color: var(--text-light-gray);
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .project-description {
+            color: var(--text-light-gray);
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .project-card:hover,
+        .certification-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 40px rgba(252, 191, 73, 0.25);
+            border-color: var(--maroon);
+        }
+
+        .project-card:hover .project-card-header,
+        .certification-card:hover .certification-card-header {
+            background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
+        }
+
+        /* Certification Cards Container */
+        .certification-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+
 
         .certification-card-image {
             background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
@@ -417,75 +430,11 @@
             transform: scale(1.1);
         }
 
-        .certification-card-header {
-            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
-            padding: 20px;
-            border-bottom: 2px solid var(--maroon);
-            min-height: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .certification-card-header h4 {
-            color: var(--white);
-            font-size: 1.1rem;
-            margin: 0;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            line-height: 1.3;
-        }
-
-        .certification-card-content {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .certification-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
-
-        .certification-tag {
-            background: rgba(252, 191, 73, 0.15);
-            color: var(--maroon);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            border: 1px solid rgba(252, 191, 73, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-
-        .certification-issuer {
-            font-size: 0.9rem;
-            color: var(--text-light-gray);
-            font-style: italic;
-            margin-bottom: 8px;
-        }
-
         .certification-date {
-            font-size: 0.85rem;
-            color: var(--text-light-gray);
             margin-top: auto;
-            font-weight: 500;
         }
 
-        .certification-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 15px 40px rgba(252, 191, 73, 0.25);
-            border-color: var(--maroon);
-        }
 
-        .certification-card:hover .certification-card-header {
-            background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
-        }
 
         /* Certification Card Animations */
         .certification-card {
@@ -777,10 +726,9 @@
             </div>
             <div class="certification-card-content">
                 <div class="certification-tags">
-                    <span class="certification-tag">Python Libraries</span>
+                    <span class="certification-tag">Data Cleaning & Visualization</span>
                 </div>
-                <div class="certification-issuer">Cisco Network Academy</div>
-                <div class="certification-date">2026</div>
+                <div class="certification-date">Cisco Network Academy — 2026</div>
             </div>
         </div>
 
@@ -796,8 +744,7 @@
                     <span class="certification-tag">Queries</span>
                     <span class="certification-tag">Aggregation</span>
                 </div>
-                <div class="certification-issuer">MongoDB</div>
-                <div class="certification-date">2026</div>
+                <div class="certification-date">MongoDB — 2026</div>
             </div>
         </div>
 
@@ -813,8 +760,7 @@
                     <span class="certification-tag">MongoDB</span>
                     <span class="certification-tag">Database</span>
                 </div>
-                <div class="certification-issuer">MongoDB</div>
-                <div class="certification-date">2026</div>
+                <div class="certification-date">MongoDB — 2026</div>
             </div>
         </div>
 
@@ -830,8 +776,7 @@
                     <span class="certification-tag">NoSQL</span>
                     <span class="certification-tag">Data Modeling</span>
                 </div>
-                <div class="certification-issuer">MongoDB</div>
-                <div class="certification-date">2026</div>
+                <div class="certification-date">MongoDB — 2026</div>
             </div>
         </div>
 
@@ -846,8 +791,7 @@
                 <div class="certification-tags">
                     <span class="certification-tag">Machine Learning</span>
                 </div>
-                <div class="certification-issuer">Microsoft Azure</div>
-                <div class="certification-date">2026</div>
+                <div class="certification-date">Microsoft Learn — 2026</div>
             </div>
         </div>
 
@@ -863,8 +807,7 @@
                     <span class="certification-tag">Python</span>
                     <span class="certification-tag">Programming</span>
                 </div>
-                <div class="certification-issuer">Cisco Network Academy</div>
-                <div class="certification-date">2025</div>
+                <div class="certification-date">Cisco Network Academy — 2025</div>
             </div>
         </div>
 
@@ -877,11 +820,9 @@
             </div>
             <div class="certification-card-content">
                 <div class="certification-tags">
-                    <span class="certification-tag">AWS</span>
-                    <span class="certification-tag">Cloud</span>
+                    <span class="certification-tag">Cloud Computing</span>
                 </div>
-                <div class="certification-issuer">AWS</div>
-                <div class="certification-date">2025</div>
+                <div class="certification-date">AWS — 2025</div>
             </div>
         </div>
 
