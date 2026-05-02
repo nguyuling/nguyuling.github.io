@@ -17,7 +17,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--text-light);
             margin: 0;
@@ -154,7 +154,8 @@
             background: var(--dark-bg);
         }
         
-        h3 { 
+        h3 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             border-bottom: 2px solid var(--maroon); 
             display: inline-block; 
             margin-bottom: 30px;
@@ -231,7 +232,6 @@
         .item-title { 
             font-weight: 700; 
             color: var(--maroon); 
-            text-transform: uppercase; 
             font-size: 1.1rem;
             margin-bottom: 5px;
         }
@@ -239,14 +239,14 @@
         .item-topic { 
             font-size: 0.9rem; 
             color: var(--text-light-gray); 
-            font-style: italic;
         }
         
         .item-institution { 
-            font-style: italic; 
             font-size: 0.9rem; 
             color: var(--text-light-gray);
             margin-bottom: 8px;
+            text-transform: uppercase;
+            font-family: JetBrains Mono, monospace;
         }
 
         .item:hover .item-institution {
@@ -265,6 +265,7 @@
             color: var(--text-light-gray);
             margin-bottom: 10px;
             font-weight: 500;
+            font-family: JetBrains Mono, monospace;
         }
         
         .item ul {
@@ -316,11 +317,10 @@
 
         .project-card-header h4,
         .certification-card-header h4 {
-            color: var(--white);
+            color: var(--maroon);
+            font-weight: 700;
             margin: 0;
             text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         .project-card-header h4 {
@@ -335,6 +335,7 @@
         .project-card-content,
         .certification-card-content {
             padding: 25px;
+            text-align: justify;
         }
 
         .certification-card-content {
@@ -364,12 +365,11 @@
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 0.7rem;
-            font-weight: 600;
             border: 1px solid rgba(252, 191, 73, 0.3);
-            text-transform: uppercase;
             letter-spacing: 0.3px;
             white-space: nowrap;
             display: inline-block;
+            font-family: JetBrains Mono, monospace;
         }
 
         .project-date,
@@ -379,6 +379,7 @@
             text-align: center;
             margin-bottom: 10px;
             font-weight: 500;
+            font-family: JetBrains Mono, monospace;
         }
 
         .project-description {
@@ -690,25 +691,22 @@
     <h3>Education</h3>
     <div class="items-container">
         <div class="item">
+            <div class="item-title">B.S. Computer Science (Bioinformatics)</div>
             <div class="item-date">2023 - 2027</div>
-            <div class="item-title">Bachelor of Computer Science (Bioinformatics)</div>
             <div class="item-institution">Universiti Teknologi Malaysia</div>
             <div class="item-topic">Latest CGPA: 3.78</div>
-            <div class="item-topic">Bioinformatics, Computational Biology, Database, Application Development</div>
         </div>
         <div class="item">
+            <div class="item-title">STPM</div>
             <div class="item-date">2021 - 2023</div>
-            <div class="item-title">Sijil Tinggi Persekolahan Malaysia (STPM)</div>
             <div class="item-institution">SABS Kuantan</div>
-            <div class="item-topic">CGPA: 3.75</div>
-            <div class="item-topic">Biology, Chemistry, Mathematics(T), General Studies</div>
+            <div class="item-topic">Life Science; CGPA: 3.75</div>
         </div>
         <div class="item">
+            <div class="item-title">SPM</div>
             <div class="item-date">2016 - 2021</div>
-            <div class="item-title">Sijil Pelajaran Malaysia (SPM)</div>
             <div class="item-institution">SMK Rompin</div>
-            <div class="item-topic">Grade: 10As</div>
-            <div class="item-topic">Pure Science Stream</div>
+            <div class="item-topic">Pure Science; Grade: 10As</div>
         </div>
     </div>
 </section>
@@ -832,8 +830,8 @@
 <section id="cocurriculum" style="padding: 60px 10%;">
     <h3>Co-curriculum</h3>
     <div class="item">
-        <div class="item-date">2025</div>
         <div class="item-title">Exco & Faculty Representative</div>
+        <div class="item-date">2025</div>
         <div class="item-institution">Student Representative Council (MPP) 2024/2025</div>
         <ul>
             <li>HOD Welfare Department, coordinated welfare initiatives and addressed students' concerns.</li>
@@ -842,8 +840,8 @@
         </ul>
     </div>
     <div class="item">
-        <div class="item-date">2024</div>
         <div class="item-title">Active Member</div>
+        <div class="item-date">2024</div>
         <div class="item-institution">Persatuan Mahasiswa Sains Komputer (PERSAKA)</div>
         <ul>
             <li>Committee member, Artificial Intelligence & Robotics 2024 & Sukan Sains Komputer 2024.</li>
@@ -851,9 +849,9 @@
         </ul>
     </div>
     <div class="item">
-        <div class="item-date">2024</div>
         <div class="item-title">Deputy Secretary</div>
-        <div class="item-institution">Friends of UTM Library (FOLY) 2023/2024</div>
+        <div class="item-date">2024</div>
+    <div class="item-institution">Friends of UTM Library (FOLY) 2023/2024</div>
         <ul>
             <li>Panel, Read & Relax Series.</li>
         </ul>
