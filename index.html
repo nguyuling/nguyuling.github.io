@@ -171,45 +171,7 @@
             padding-bottom: 5px;
         }
 
-        /* Skills Grid */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
 
-        .skill-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            border-left: 5px solid var(--maroon);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .skill-card h4 {
-            color: var(--maroon);
-            font-size: 1.2rem;
-            margin-top: 0;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .skill-card p {
-            color: var(--text-light-gray);
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin: 8px 0;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(252, 191, 73, 0.2);
-            border-left-width: 8px;
-            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
-        }
 
         /* Items Container */
         .items-container {
@@ -670,16 +632,7 @@
             animation-delay: 0.5s;
         }
 
-        .skill-card {
-            opacity: 0;
-            animation: scaleIn 0.6s ease-out forwards;
-        }
 
-        .skill-card:nth-child(1) { animation-delay: 0.5s; }
-        .skill-card:nth-child(2) { animation-delay: 0.6s; }
-        .skill-card:nth-child(3) { animation-delay: 0.7s; }
-        .skill-card:nth-child(4) { animation-delay: 0.8s; }
-        .skill-card:nth-child(5) { animation-delay: 0.9s; }
 
         .project-card {
             opacity: 0;
@@ -727,60 +680,6 @@
         <img src="profile.jpg" alt="Ngu Yu Ling">
     </div>
 </header>
-
-<section id="education" style="padding: 60px 10%;">
-    <h3>Education</h3>
-    <div class="items-container">
-        <div class="item">
-            <div class="item-date">2023 - 2027</div>
-            <div class="item-title">Bachelor of Computer Science (Bioinformatics)</div>
-            <div class="item-institution">Universiti Teknologi Malaysia</div>
-            <div class="item-topic">Latest CGPA: 3.78</div>
-            <div class="item-topic">Bioinformatics, Computational Biology, Database, Application Development</div>
-        </div>
-        <div class="item">
-            <div class="item-date">2021 - 2023</div>
-            <div class="item-title">Sijil Tinggi Persekolahan Malaysia (STPM)</div>
-            <div class="item-institution">SABS Kuantan</div>
-            <div class="item-topic">CGPA: 3.75</div>
-            <div class="item-topic">Biology, Chemistry, Mathematics(T), General Studies</div>
-        </div>
-        <div class="item">
-            <div class="item-date">2016 - 2021</div>
-            <div class="item-title">Sijil Pelajaran Malaysia (SPM)</div>
-            <div class="item-institution">SMK Rompin</div>
-            <div class="item-topic">Grade: 10As</div>
-            <div class="item-topic">Pure Science Stream</div>
-        </div>
-    </div>
-</section>
-
-<section id="skills" style="padding: 60px 10%;">
-    <h3>Technical Expertise</h3>
-    <div class="skills-container">
-        <div class="skill-card">
-            <h4>Programming</h4>
-            <p>Proficient in Python (and various libraries)</p>
-            <p>Intermediate proficiency in SQL, C++, Java, HTML, and CSS.</p>
-        </div>
-        <div class="skill-card">
-            <h4>Data Analytics</h4>
-            <p>Clean, preprocess, analyze, and visualize complex datasets to extract meaningful insights.</p>
-        </div>
-        <div class="skill-card">
-            <h4>Machine Learning</h4>
-            <p>Implement predictive ML models in deliverable projects, including CNN, Random Forest, and Polynomial Regression.</p>
-        </div>
-        <div class="skill-card">
-            <h4>Strong Biology Foundation</h4>
-            <p>Analyze and interpret complex biological data, including genomics, gene expression, and biomarkers.</p>
-        </div>
-        <div class="skill-card">
-            <h4>Soft Skills</h4>
-            <p>Strong leadership, cross-functional team collaboration, effective communication, and efficient time management.</p>
-        </div>
-    </div>
-</section>
 
 <section id="projects" style="padding: 60px 10%;">
     <h3>Projects & Work</h3>
@@ -838,34 +737,30 @@
     </div>
 </section>
 
-<section id="cocurriculum" style="padding: 60px 10%;">
-    <h3>Co-curriculum</h3>
-    <div class="item">
-        <div class="item-date">2025</div>
-        <div class="item-title">Exco & Faculty Representative</div>
-        <div class="item-institution">Student Representative Council (MPP) 2024/2025</div>
-        <ul>
-            <li>HOD Welfare Department, coordinated welfare initiatives and addressed students' concerns.</li>
-            <li>Faculty of Computing Representative, oversaw faculty program in alignment with Student Empowerment framework.</li>
-            <li>Committee member, initiated several university major programs including Festival Konvokesyen '69, Orientation Week 2025 and UNBOCS Carnival 2024.</li>
-        </ul>
-    </div>
-    <div class="item">
-        <div class="item-date">2024</div>
-        <div class="item-title">Active Member</div>
-        <div class="item-institution">Persatuan Mahasiswa Sains Komputer (PERSAKA)</div>
-        <ul>
-            <li>Committee member, Artificial Intelligence & Robotics 2024 & Sukan Sains Komputer 2024.</li>
-            <li>Emcee, UTMxHackathon 2024.</li>
-        </ul>
-    </div>
-    <div class="item">
-        <div class="item-date">2024</div>
-        <div class="item-title">Deputy Secretary</div>
-        <div class="item-institution">Friends of UTM Library (FOLY) 2023/2024</div>
-        <ul>
-            <li>Panel, Read & Relax Series.</li>
-        </ul>
+<section id="education" style="padding: 60px 10%;">
+    <h3>Education</h3>
+    <div class="items-container">
+        <div class="item">
+            <div class="item-date">2023 - 2027</div>
+            <div class="item-title">Bachelor of Computer Science (Bioinformatics)</div>
+            <div class="item-institution">Universiti Teknologi Malaysia</div>
+            <div class="item-topic">Latest CGPA: 3.78</div>
+            <div class="item-topic">Bioinformatics, Computational Biology, Database, Application Development</div>
+        </div>
+        <div class="item">
+            <div class="item-date">2021 - 2023</div>
+            <div class="item-title">Sijil Tinggi Persekolahan Malaysia (STPM)</div>
+            <div class="item-institution">SABS Kuantan</div>
+            <div class="item-topic">CGPA: 3.75</div>
+            <div class="item-topic">Biology, Chemistry, Mathematics(T), General Studies</div>
+        </div>
+        <div class="item">
+            <div class="item-date">2016 - 2021</div>
+            <div class="item-title">Sijil Pelajaran Malaysia (SPM)</div>
+            <div class="item-institution">SMK Rompin</div>
+            <div class="item-topic">Grade: 10As</div>
+            <div class="item-topic">Pure Science Stream</div>
+        </div>
     </div>
 </section>
 
@@ -992,6 +887,39 @@
 
     </div>
 </section>
+
+<section id="cocurriculum" style="padding: 60px 10%;">
+    <h3>Co-curriculum</h3>
+    <div class="item">
+        <div class="item-date">2025</div>
+        <div class="item-title">Exco & Faculty Representative</div>
+        <div class="item-institution">Student Representative Council (MPP) 2024/2025</div>
+        <ul>
+            <li>HOD Welfare Department, coordinated welfare initiatives and addressed students' concerns.</li>
+            <li>Faculty of Computing Representative, oversaw faculty program in alignment with Student Empowerment framework.</li>
+            <li>Committee member, initiated several university major programs including Festival Konvokesyen '69, Orientation Week 2025 and UNBOCS Carnival 2024.</li>
+        </ul>
+    </div>
+    <div class="item">
+        <div class="item-date">2024</div>
+        <div class="item-title">Active Member</div>
+        <div class="item-institution">Persatuan Mahasiswa Sains Komputer (PERSAKA)</div>
+        <ul>
+            <li>Committee member, Artificial Intelligence & Robotics 2024 & Sukan Sains Komputer 2024.</li>
+            <li>Emcee, UTMxHackathon 2024.</li>
+        </ul>
+    </div>
+    <div class="item">
+        <div class="item-date">2024</div>
+        <div class="item-title">Deputy Secretary</div>
+        <div class="item-institution">Friends of UTM Library (FOLY) 2023/2024</div>
+        <ul>
+            <li>Panel, Read & Relax Series.</li>
+        </ul>
+    </div>
+</section>
+
+
 
 <footer>
     <p>Let's Connect</p>
