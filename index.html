@@ -181,36 +181,77 @@
             gap: 20px;
         }
 
+        #education .items-container {
+            flex-direction: row;
+            gap: 0;
+            position: relative;
+            padding-top: 40px;
+        }
+
+        #education .items-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--maroon) 0%, rgba(252, 191, 73, 0.3) 100%);
+        }
+
         /* Education Timeline */
         #education .item { 
-            margin-bottom: 40px;
+            margin-bottom: 0;
             transition: all 0.3s ease;
             padding: 25px;
-            padding-left: 35px;
+            padding-left: 25px;
             border-radius: 0;
             background: transparent;
-            border-left: 3px solid var(--maroon);
+            border: none;
+            border-right: 1px solid rgba(252, 191, 73, 0.2);
             box-shadow: none;
             position: relative;
+            flex: 1;
+            text-align: center;
+        }
+
+        #education .item:first-child {
+            flex: 1.8;
         }
 
         #education .item::before {
             content: '';
             position: absolute;
-            left: -10px;
-            top: 30px;
-            width: 16px;
-            height: 16px;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 40px;
+            background: var(--maroon);
+        }
+
+        #education .item::after {
+            content: '';
+            position: absolute;
+            top: -44px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
             background: var(--maroon);
-            box-shadow: 0 0 0 4px var(--dark-bg);
-            border: 2px solid var(--maroon);
+            border: 2px solid var(--dark-bg);
+            box-shadow: 0 0 0 2px var(--maroon);
+        }
+
+        #education .item:last-child {
+            border-right: none;
         }
 
         #education .item:hover {
-            transform: translateX(10px);
+            transform: translateY(-5px);
             box-shadow: none;
-            padding-left: 40px;
+            padding: 25px;
+            padding-left: 25px;
         }
 
         /* Card-based items for other sections */
@@ -243,7 +284,7 @@
         
         .item-institution { 
             font-size: 0.9rem; 
-            color: var(--text-light-gray);
+            color: var(--white);
             margin-bottom: 8px;
             text-transform: uppercase;
             font-family: JetBrains Mono, monospace;
@@ -266,6 +307,7 @@
             margin-bottom: 10px;
             font-weight: 500;
             font-family: JetBrains Mono, monospace;
+            color: #FFFFFF;
         }
         
         .item ul {
@@ -373,9 +415,9 @@
         }
 
         .project-date,
-        .certification-date {
+        .certification-info {
             font-size: 0.85rem;
-            color: var(--text-light-gray);
+            color: #FFFFFF;
             text-align: center;
             margin-bottom: 10px;
             font-weight: 500;
@@ -642,7 +684,6 @@
                 <div class="project-tags">
                     <span class="project-tag">Python</span>
                     <span class="project-tag">Machine Learning</span>
-                    <span class="project-tag">Data Analysis</span>
                 </div>
                 <div class="project-date">2024 - 2025</div>
                 <div class="project-description">
@@ -691,22 +732,22 @@
     <h3>Education</h3>
     <div class="items-container">
         <div class="item">
-            <div class="item-title">B.S. Computer Science (Bioinformatics)</div>
             <div class="item-date">2023 - 2027</div>
+            <div class="item-title">B.S. Computer Science (Bioinformatics)</div>
             <div class="item-institution">Universiti Teknologi Malaysia</div>
-            <div class="item-topic">Latest CGPA: 3.78</div>
+            <div class="item-topic">Dean's List. CGPA 3.78</div>
         </div>
         <div class="item">
-            <div class="item-title">STPM</div>
             <div class="item-date">2021 - 2023</div>
+            <div class="item-title">STPM</div>
             <div class="item-institution">SABS Kuantan</div>
-            <div class="item-topic">Life Science; CGPA: 3.75</div>
+            <div class="item-topic">Life Science. CGPA 3.75</div>
         </div>
         <div class="item">
-            <div class="item-title">SPM</div>
             <div class="item-date">2016 - 2021</div>
+            <div class="item-title">SPM</div>
             <div class="item-institution">SMK Rompin</div>
-            <div class="item-topic">Pure Science; Grade: 10As</div>
+            <div class="item-topic">Pure Science. 10As</div>
         </div>
     </div>
 </section>
@@ -726,7 +767,7 @@
                 <div class="certification-tags">
                     <span class="certification-tag">Data Cleaning & Visualization</span>
                 </div>
-                <div class="certification-date">Cisco Network Academy — 2026</div>
+                <div class="certification-info">Cisco Network Academy — 2026</div>
             </div>
         </div>
 
@@ -742,7 +783,7 @@
                     <span class="certification-tag">Queries</span>
                     <span class="certification-tag">Aggregation</span>
                 </div>
-                <div class="certification-date">MongoDB — 2026</div>
+                <div class="certification-info">MongoDB — 2026</div>
             </div>
         </div>
 
@@ -758,7 +799,7 @@
                     <span class="certification-tag">MongoDB</span>
                     <span class="certification-tag">Database</span>
                 </div>
-                <div class="certification-date">MongoDB — 2026</div>
+                <div class="certification-info">MongoDB — 2026</div>
             </div>
         </div>
 
@@ -774,7 +815,7 @@
                     <span class="certification-tag">NoSQL</span>
                     <span class="certification-tag">Data Modeling</span>
                 </div>
-                <div class="certification-date">MongoDB — 2026</div>
+                <div class="certification-info">MongoDB — 2026</div>
             </div>
         </div>
 
@@ -789,7 +830,7 @@
                 <div class="certification-tags">
                     <span class="certification-tag">Machine Learning</span>
                 </div>
-                <div class="certification-date">Microsoft Learn — 2026</div>
+                <div class="certification-info">Microsoft Learn — 2026</div>
             </div>
         </div>
 
@@ -805,7 +846,7 @@
                     <span class="certification-tag">Python</span>
                     <span class="certification-tag">Programming</span>
                 </div>
-                <div class="certification-date">Cisco Network Academy — 2025</div>
+                <div class="certification-info">Cisco Network Academy — 2025</div>
             </div>
         </div>
 
@@ -820,7 +861,7 @@
                 <div class="certification-tags">
                     <span class="certification-tag">Cloud Computing</span>
                 </div>
-                <div class="certification-date">AWS — 2025</div>
+                <div class="certification-info">AWS — 2025</div>
             </div>
         </div>
 
