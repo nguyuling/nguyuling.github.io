@@ -254,6 +254,75 @@
             padding-left: 25px;
         }
 
+        /* Co-curriculum Timeline */
+        #cocurriculum .items-container {
+            flex-direction: row;
+            gap: 0;
+            position: relative;
+            padding-top: 40px;
+        }
+
+        #cocurriculum .items-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--maroon) 0%, rgba(252, 191, 73, 0.3) 100%);
+        }
+
+        #cocurriculum .item {
+            margin-bottom: 0;
+            transition: all 0.3s ease;
+            padding: 25px;
+            padding-left: 25px;
+            border-radius: 0;
+            background: transparent;
+            border: none;
+            border-right: 1px solid rgba(252, 191, 73, 0.2);
+            box-shadow: none;
+            position: relative;
+            flex: 1;
+            text-align: center;
+        }
+
+        #cocurriculum .item::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 40px;
+            background: var(--maroon);
+        }
+
+        #cocurriculum .item::after {
+            content: '';
+            position: absolute;
+            top: -44px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--maroon);
+            border: 2px solid var(--dark-bg);
+            box-shadow: 0 0 0 2px var(--maroon);
+        }
+
+        #cocurriculum .item:last-child {
+            border-right: none;
+        }
+
+        #cocurriculum .item:hover {
+            transform: translateY(-5px);
+            box-shadow: none;
+            padding: 25px;
+            padding-left: 25px;
+        }
+
         /* Card-based items for other sections */
         .item { 
             margin-bottom: 20px;
@@ -862,7 +931,7 @@
                 <div class="certification-tags">
                     <span class="certification-tag">Data Cleaning & Visualization</span>
                 </div>
-                <div class="certification-info">Cisco Network Academy — 2026</div>
+                <div class="certification-info">Cisco NetAcad — 2026</div>
             </div>
         </div>
 
@@ -941,7 +1010,7 @@
                     <span class="certification-tag">Python</span>
                     <span class="certification-tag">Programming</span>
                 </div>
-                <div class="certification-info">Cisco Network Academy — 2025</div>
+                <div class="certification-info">Cisco NetAcad — 2025</div>
             </div>
         </div>
 
@@ -965,37 +1034,23 @@
 
 <section id="cocurriculum" style="padding: 60px 10%;">
     <h3>Co-curriculum</h3>
-    <div class="item">
-        <div class="item-title">Exco & Faculty Representative</div>
-        <div class="item-date">2025</div>
-        <div class="item-institution">Student Representative Council (MPP) 2024/2025</div>
-        <ul>
-            <li>HOD Welfare Department, coordinated welfare initiatives and addressed students' concerns.</li>
-            <li>Faculty of Computing Representative, oversaw faculty program in alignment with Student Empowerment framework.</li>
-            <li>Committee member, initiated several university major programs including Festival Konvokesyen '69, Orientation Week 2025 and UNBOCS Carnival 2024.</li>
-        </ul>
+    <div class="items-container">
+        <div class="item">
+            <div class="item-date">2025</div>
+            <div class="item-title">HOD Welfare Department & Faculty Representative</div>
+            <div class="item-institution">Student Representative Council (MPP) 2024/2025</div>
+        </div>
+        <div class="item">
+            <div class="item-date">2024</div>
+            <div class="item-title">Active Member</div>
+            <div class="item-institution">Persatuan Mahasiswa Sains Komputer (PERSAKA)</div>
+        </div>
+        <div class="item">
+            <div class="item-date">2024</div>
+            <div class="item-title">Deputy Secretary</div>
+            <div class="item-institution">Friends of UTM Library (FOLY) 2023/2024</div>
+        </div>
     </div>
-    <div class="item">
-        <div class="item-title">Active Member</div>
-        <div class="item-date">2024</div>
-        <div class="item-institution">Persatuan Mahasiswa Sains Komputer (PERSAKA)</div>
-        <ul>
-            <li>Committee member, Artificial Intelligence & Robotics 2024 & Sukan Sains Komputer 2024.</li>
-            <li>Emcee, UTMxHackathon 2024.</li>
-        </ul>
-    </div>
-    <div class="item">
-        <div class="item-title">Deputy Secretary</div>
-        <div class="item-date">2024</div>
-    <div class="item-institution">Friends of UTM Library (FOLY) 2023/2024</div>
-        <ul>
-            <li>Panel, Read & Relax Series.</li>
-        </ul>
-    </div>
-</section>
-
-<section id="experience" style="padding: 60px 10%;">
-    <h3>Experience</h3>
     <div class="experience-gallery">
         <div class="experience-item">
             <img src="experience/utmpearl.png" alt="UTM Pearl 2026">
