@@ -17,7 +17,7 @@
         }
 
         body {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             line-height: 1.5;
             color: var(--text-light);
             margin: 0;
@@ -150,16 +150,10 @@
             background: var(--dark-bg);
         }
         
-        section:nth-child(even) {
-            background: var(--dark-bg);
-        }
-        
         h3 {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
             border-bottom: 2px solid var(--maroon); 
             display: inline-block; 
-            margin-bottom: 30px;
-            text-transform: uppercase;
+            margin-bottom: 20px;
             transition: all 0.3s ease;
             cursor: default;
             color: var(--white);
@@ -342,7 +336,7 @@
         .item-title { 
             font-weight: 700; 
             color: var(--maroon); 
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 5px;
         }
         
@@ -352,11 +346,10 @@
         }
         
         .item-institution { 
-            font-size: 0.7rem; 
+            font-size: 0.8rem; 
             color: var(--white);
             margin-bottom: 8px;
             text-transform: uppercase;
-            font-family: JetBrains Mono, monospace;
         }
 
         .item:hover .item-institution {
@@ -373,9 +366,9 @@
         .item-date { 
             font-size: 0.85rem; 
             color: var(--text-light-gray);
+            margin-top: -15px;
             margin-bottom: 10px;
             font-weight: 500;
-            font-family: JetBrains Mono, monospace;
             color: #FFFFFF;
         }
         
@@ -398,7 +391,7 @@
         /* Projects Container */
         .projects-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             grid-auto-rows: auto;
             gap: 30px;
             margin-top: 30px;
@@ -434,7 +427,7 @@
             font-weight: 700;
             margin: 0;
             text-align: center;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .certification-card-header h4 {
@@ -443,7 +436,7 @@
 
         .project-card-content,
         .certification-card-content {
-            padding: 25px;
+            padding: 15px;
             text-align: justify;
         }
 
@@ -473,7 +466,7 @@
             color: var(--maroon);
             padding: 6px 14px;
             border-radius: 20px;
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             border: 1px solid rgba(252, 191, 73, 0.3);
             letter-spacing: 0.3px;
             white-space: nowrap;
@@ -483,28 +476,25 @@
 
         .project-date,
         .certification-info {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #FFFFFF;
             text-align: center;
-            margin-bottom: 10px;
+            text-transform: uppercase;
             font-weight: 500;
-            font-family: JetBrains Mono, monospace;
         }
 
         .project-institution {
-            font-size: 0.7rem;
+            font-size: 0.8rem;
             color: var(--white);
             text-align: center;
             margin-bottom: 15px;
             text-transform: uppercase;
-            font-family: JetBrains Mono, monospace;
         }
 
         .project-description {
             color: var(--text-light-gray);
             line-height: 1.5;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
+            font-size: 0.8rem;
         }
 
         .project-card:hover,
@@ -520,19 +510,20 @@
         }
 
         /* Project Card Image */
-        .project-card-image {
+        .project-card-image, .certification-card-image {
             background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 180px;
+            padding: 5px;
             overflow: hidden;
         }
 
-        .project-card-image img {
+        .project-card-image img, .certification-card-image img {
             width: 100%;
             height: auto;
             object-fit: contain;
+            border-radius: 8px;
             transition: transform 0.3s ease;
         }
 
@@ -548,33 +539,9 @@
             margin-top: 30px;
         }
 
-
-
-        .certification-card-image {
-            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-        }
-
-        .certification-card-image img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 297 / 210;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
         .certification-card:hover .certification-card-image img {
             transform: scale(1.1);
         }
-
-        .certification-date {
-            margin-top: auto;
-        }
-
-
 
         /* Certification Card Animations */
         .certification-card {
@@ -601,14 +568,14 @@
         /* Experience Gallery */
         .experience-gallery {
             width: 100%;
-            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: auto;
         }
 
         .experience-item {
-            width: 25%;
-            margin-bottom: 20px;
+            width: 24%;
             box-sizing: border-box;
-            padding-right: 20px;
             border-radius: 8px;
             overflow: hidden;
             cursor: pointer;
@@ -616,6 +583,7 @@
             background: var(--card-bg);
             border: 1px solid rgba(252, 191, 73, 0.2);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin: 5px;
             position: relative;
         }
 
@@ -627,7 +595,7 @@
             background: rgba(0, 0, 0, 0.75);
             color: var(--maroon);
             padding: 10px;
-            font-size: 0.85rem;
+            font-size: 0.6rem;
             text-align: center;
             opacity: 1;
             transition: opacity 0.3s ease;
@@ -833,7 +801,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             z-index: 2000;
             align-items: center;
             justify-content: center;
@@ -875,7 +843,7 @@
             background: transparent;
             border: none;
             color: var(--maroon);
-            font-size: 2rem;
+            font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
             width: 40px;
@@ -917,7 +885,7 @@
         .project-modal-header h2 {
             color: var(--maroon);
             margin: 0;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             text-align: left;
             padding: 0;
         }
@@ -950,7 +918,7 @@
             line-height: 1.5;
             color: var(--text-light-gray);
             margin: 0;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             flex-shrink: 1;
             overflow-y: auto;
             max-height: 150px;
@@ -997,7 +965,6 @@
             border: 2px solid var(--maroon);
             font-size: 0.7rem;
             font-family: JetBrains Mono, monospace;
-            letter-spacing: 0.3px;
         }
 
         .project-link-button:hover {
@@ -1088,7 +1055,7 @@
                     <span class="project-tag">Machine Learning</span>
                 </div>
                 <div class="project-description">
-                    Developed predictive models for cancer remission prediction using scikit-learn and analyzed complex biomarker datasets with visualization techniques.
+                    Utilized various Python libraires to develop & compare several ML models for leukemia classification (AML/ALL/CML/CLL) using gene expresion data from GEO.
                 </div>
             </div>
         </div>
@@ -1109,14 +1076,14 @@
                     <span class="project-tag">Apps Deployment</span>
                 </div>
                 <div class="project-description">
-                    Built a full-stack bioinformatics application for genomic data processing and analysis with a user-friendly interface and efficient database management.
+                    Built a full-stack education web application for secondary school CS students. I was in charged of the Quiz Module and also one of the developers responsible for module integration and DB management.
                 </div>
             </div>
         </div>
 
-        <div class="project-card" data-github="" data-report="">
+        <div class="project-card" data-github="https://github.com/nguyuling/Bioinformatics">
             <div class="project-card-image">
-                <img src="project/computational-biology.png" alt="Computational Biology Tools">
+                <img src="project/bioinfo-streamlit.png" alt="Computational Biology Tools">
             </div>
             <div class="project-card-header">
                 <h4>Computational Biology Tools</h4>
@@ -1128,8 +1095,7 @@
                     <span class="project-tag">Data Visualization</span>
                 </div>
                 <div class="project-description">
-                    Developed a computational framework for protein sequence analysis and structure prediction using neural networks and biological domain knowledge.
-                </div>
+                    Built a computional biology interface for data visualization of the Leukemia Classification project.
             </div>
         </div>
     </div>
@@ -1200,7 +1166,7 @@
                 <div class="certification-tags">
                     <span class="certification-tag">Data Manipulation</span>
                 </div>
-                <div class="certification-info">Cisco NetAcad — 2026</div>
+                <div class="certification-info">Cisco Network Academy, 2026</div>
             </div>
         </div>
 
@@ -1216,7 +1182,7 @@
                     <span class="certification-tag">Query</span>
                     <span class="certification-tag">Aggregation</span>
                 </div>
-                <div class="certification-info">MongoDB — 2026</div>
+                <div class="certification-info">MongoDB, 2026</div>
             </div>
         </div>
 
@@ -1232,7 +1198,7 @@
                     <span class="certification-tag">MongoDB</span>
                     <span class="certification-tag">Database</span>
                 </div>
-                <div class="certification-info">MongoDB — 2026</div>
+                <div class="certification-info">MongoDB, 2026</div>
             </div>
         </div>
 
@@ -1248,7 +1214,7 @@
                     <span class="certification-tag">NoSQL</span>
                     <span class="certification-tag">Data Modeling</span>
                 </div>
-                <div class="certification-info">MongoDB — 2026</div>
+                <div class="certification-info">MongoDB, 2026</div>
             </div>
         </div>
 
@@ -1263,7 +1229,7 @@
                 <div class="certification-tags">
                     <span class="certification-tag">Machine Learning</span>
                 </div>
-                <div class="certification-info">Microsoft Learn — 2026</div>
+                <div class="certification-info">Microsoft Learn, 2026</div>
             </div>
         </div>
 
@@ -1278,7 +1244,7 @@
                 <div class="certification-tags">
                     <span class="certification-tag">Python Libraries</span>
                 </div>
-                <div class="certification-info">Cisco NetAcad — 2025</div>
+                <div class="certification-info">Cisco NetAcad, 2025</div>
             </div>
         </div>
 
@@ -1293,7 +1259,7 @@
                 <div class="certification-tags">
                     <span class="certification-tag">Cloud Computing</span>
                 </div>
-                <div class="certification-info">AWS — 2025</div>
+                <div class="certification-info">AWS, 2025</div>
             </div>
         </div>
 
