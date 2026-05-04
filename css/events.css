@@ -2,7 +2,7 @@
 
 .events-wrapper {
     display: grid;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr 250px;
     gap: 30px;
     margin-top: 10px;
 }
@@ -177,6 +177,12 @@
     gap: 6px;
 }
 
+.stat-bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .stat-label {
     color: var(--text-light);
     font-size: 0.75rem;
@@ -184,7 +190,7 @@
 }
 
 .stat-bar {
-    width: 100%;
+    flex: 1;
     height: 12px;
     background: rgba(252, 191, 73, 0.1);
     border-radius: 6px;
@@ -204,6 +210,7 @@
     font-size: 0.7rem;
     font-weight: 600;
     font-family: JetBrains Mono, monospace;
+    min-width: 20px;
     text-align: right;
 }
 
