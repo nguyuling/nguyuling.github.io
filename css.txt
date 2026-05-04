@@ -1,0 +1,98 @@
+navigation.css
+    logo
+    links
+        href
+          :
+        href
+
+
+hero.css
+    hero
+        hero-text
+            h1
+            card-tags
+                card-tag
+                    :
+                card-tag
+            href
+        hero-img
+            img
+
+
+item.css
+    1. education
+        h3
+        items-container
+            item
+                item-date
+                item-title
+                item-institution
+                item-description
+
+    2.  cocurriculum
+            h3
+            items-container
+                item
+                    item-date
+                    item-title
+                    item-institution
+                    card-tags
+                        card-tag
+                            :
+                        card-tag
+
+
+card.css
+    1.  projects
+            h3
+            card-container
+                card
+                    card-image
+                        img
+                    card-header
+                        h4
+                    card-content
+                        card-info
+                        card-tags
+                            card-tag
+                                :
+                            card-tag
+                        card-description
+                    card-footer
+
+    2.  certification
+            h3
+            card-container
+                card
+                    card-image
+                        img
+                    card-header
+                        h4
+                    card-content
+                        card-info
+                        card-tags
+                            card tag
+                                :
+                            card tag
+
+
+experiece.css
+    experience-gallery
+        experience-item
+            img
+        experience-item
+                :
+        experience-item
+
+
+footer.css
+    p
+    social-links
+        href
+          :
+        href
+    p
+
+
+animation.css
+mobile.css
