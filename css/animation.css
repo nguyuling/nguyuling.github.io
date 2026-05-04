@@ -1,0 +1,142 @@
+/* On Load Animations */
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes heroSlideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes heroSlideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: pageLoad 0.5s ease-out forwards;
+}
+
+nav {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.hero {
+    animation: pageLoad 0.8s ease-out 0.2s both;
+}
+
+.hero-text {
+    animation: heroSlideInLeft 0.8s ease-out 0.3s both;
+}
+
+.hero-img {
+    animation: heroSlideInRight 0.8s ease-out 0.4s both;
+}
+
+.hero-img img {
+    animation: scaleIn 0.8s ease-out 0.5s both;
+}
+
+section {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+section:nth-child(2) {
+    animation-delay: 0.1s;
+}
+section:nth-child(3) {
+    animation-delay: 0.2s;
+}
+section:nth-child(4) {
+    animation-delay: 0.3s;
+}
+section:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+section:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.card {
+    opacity: 0;
+    animation: scaleIn 0.6s ease-out forwards;
+    cursor: pointer;
+}
+
+.item {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.items-container > .item:nth-child(1) { animation-delay: 0.3s; }
+.items-container > .item:nth-child(2) { animation-delay: 0.4s; }
+.items-container > .item:nth-child(3) { animation-delay: 0.5s; }
+
+footer {
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}

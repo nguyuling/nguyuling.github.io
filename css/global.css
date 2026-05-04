@@ -1,0 +1,39 @@
+:root {
+    --yellow: #FCBF49;
+    --dark-bg: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --text-light: #e0e0e0;
+    --text-light-gray: #a8a8a8;
+    --white: #ffffff;
+    --accent: #FCBF49;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--text-light);
+    margin: 0;
+    background-color: var(--dark-bg);
+}
+
+/* Section */
+section { 
+    padding: 60px 10%; 
+    background: var(--dark-bg);
+    text-align: center;
+}
+
+h3 {
+    text-transform: uppercase;
+    display: inline-block; 
+    transition: all 0.3s ease;
+    cursor: default;
+    color: var(--white);
+    font-size: 1.7rem;
+    letter-spacing: 1.2px;
+}
+
+h3:hover {
+    border-bottom-width: 4px;
+    padding-bottom: 5px;
+}
