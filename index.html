@@ -105,7 +105,6 @@
 
         .hero h1 { 
             font-size: 3rem; 
-            margin-bottom: 10px; 
             color: var(--white);
         }
         
@@ -425,14 +424,11 @@
         .project-card-header h4,
         .certification-card-header h4 {
             color: var(--yellow);
+            font-size: 0.8rem;
             font-weight: 700;
             margin: 0;
             text-align: center;
             font-size: 1rem;
-        }
-
-        .certification-card-header h4 {
-            line-height: 1.3;
         }
 
         .project-card-content,
@@ -1003,10 +999,6 @@
                 padding: 40px 5%;
             }
 
-            .hero h1 {
-                font-size: 2rem;
-            }
-
             .hero-img img {
                 width: 200px;
                 height: 200px;
@@ -1086,11 +1078,6 @@
                 display: none;
             }
 
-            .project-card-header h4,
-            .certification-card-header h4 {
-                font-size: 0.9rem;
-            }
-
             .project-description {
                 font-size: 0.75rem;
             }
@@ -1128,11 +1115,6 @@
 
             .hero {
                 padding: 30px 4%;
-            }
-
-            .hero h1 {
-                font-size: 1.5rem;
-                margin-bottom: 5px;
             }
 
             .hero h2 {
@@ -1180,11 +1162,6 @@
 
             .experience-item {
                 aspect-ratio: 16 / 9;
-            }
-
-            .project-card-header h4,
-            .certification-card-header h4 {
-                font-size: 0.8rem;
             }
 
             .project-card-content,
@@ -1308,9 +1285,14 @@
 
 <header class="hero">
     <div class="hero-text">
-        <h1>Hi, I'm Yu Ling</h1>
-        <h2>Computer Science (Bioinformatics) Student</h2>
-        <p style="text-align:justify">A devoted and disciplined student passionate about the intersection of biology and computing fields, contributing to the advancement of cancer research.</p>
+        <h1>Hi, I'm Yuling</h1>
+        <div class="project-tags" style="justify-content: flex-start; margin: 20px 0;">
+            <span class="project-tag">Computer Science</span>
+            <span class="project-tag">Bioinformatics</span>
+            <span class="project-tag">Cancer Genomics</span>
+            <span class="project-tag">Machine Learning</span>
+            <span class="project-tag">Spanish</span>
+        </div>
         <a href="mailto:nguyuling@gmail.com" style="background: var(--yellow); color: black; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Get In Touch</a>
     </div>
     <div class="hero-img">
