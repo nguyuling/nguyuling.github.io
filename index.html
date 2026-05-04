@@ -758,161 +758,15 @@
         .projects-container > .project-card:nth-child(2) { animation-delay: 0.4s; }
         .projects-container > .project-card:nth-child(3) { animation-delay: 0.5s; }
 
-        /* Project Modal Styles */
-        .project-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .project-modal.active {
+        /* Project Card Styles */
+        .project-card-footer {
             display: flex;
-            animation: fadeIn 0.3s ease-out;
-        }
-
-        .project-modal-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-            z-index: -1;
-        }
-
-        .project-modal-content {
-            background: var(--card-bg);
-            border-radius: 15px;
-            max-width: 900px;
-            width: 100%;
-            border: 1px #FFFFFF;
-            position: relative;
-            animation: slideUp 0.4s ease-out;
-            display: flex;
-            flex-direction: column;
-            max-height: 90vh;
-        }
-
-        .project-modal-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: transparent;
-            border: none;
-            color: var(--yellow);
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-        }
-
-        .project-modal-close:hover {
-            background: rgba(252, 191, 73, 0.2);
-            transform: rotate(90deg);
-        }
-
-        .project-modal-image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 5px;
-            height: 180px;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-
-        .project-modal-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
-        .project-modal-header {
-            padding: 0;
-            border-bottom: none;
-            background: transparent;
-        }
-
-        .project-modal-header h2 {
-            color: var(--yellow);
-            margin: 0;
-            font-size: 1.2rem;
-            text-align: left;
-            padding: 0;
-        }
-
-        .project-modal-body {
-            padding: 25px 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            flex-grow: 1;
-            overflow: hidden;
-        }
-
-        .project-modal-body .project-tags {
-            justify-content: left;
-            margin-bottom: 0;
-            gap: 8px;
-            flex-wrap: wrap;
-            flex-shrink: 0;
-        }
-
-        .project-modal-body .project-institution {
-            text-align: left;
-            margin-bottom: 0;
-            flex-shrink: 0;
-        }
-
-        .project-modal-body .project-description {
-            text-align: justify;
-            line-height: 1.5;
-            color: var(--text-light-gray);
-            margin: 0;
-            font-size: 0.8rem;
-            flex-shrink: 1;
-            overflow-y: auto;
-            max-height: 150px;
-            padding-right: 5px;
-        }
-
-        .project-modal-body .project-description::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        .project-modal-body .project-description::-webkit-scrollbar-track {
-            background: rgba(252, 191, 73, 0.1);
-            border-radius: 10px;
-        }
-
-        .project-modal-body .project-description::-webkit-scrollbar-thumb {
-            background: rgba(252, 191, 73, 0.3);
-            border-radius: 10px;
-        }
-
-        .project-modal-footer {
-            display: flex;
-            gap: 15px;
-            padding: 15px 30px 25px;
+            gap: 10px;
+            padding: 15px;
             border-top: 1px solid rgba(252, 191, 73, 0.2);
             justify-content: center;
             flex-wrap: wrap;
             background: rgba(0, 0, 0, 0.2);
-            border-radius: 0 0 13px 13px;
-            flex-shrink: 0;
         }
 
         .project-link-button {
@@ -1303,7 +1157,7 @@
 <section id="projects">
     <h3 style="border-bottom: 2px solid var(--yellow)";>Projects & Work</h3>
     <div class="projects-container">
-        <div class="project-card" data-github="https://github.com/nguyuling/Leukemia-Diagnosis" data-report="https://docs.google.com/document/d/1lsQDxMilVhyr74wi8-L8z0LFO2RKWmcNqZ0KKySc7UU/edit?usp=sharing">
+        <div class="project-card">
             <div class="project-card-image">
                 <img src="project/leukemia-classification.png" alt="Leukemia Classification Prediction">
             </div>
@@ -1320,9 +1174,17 @@
                     Utilized various Python libraires to develop & compare several ML models for leukemia classification (AML/ALL/CML/CLL) using gene expresion data from GEO.
                 </div>
             </div>
+            <div class="project-card-footer">
+                <a href="https://github.com/nguyuling/Leukemia-Diagnosis" class="project-link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-code-branch"></i> GitHub
+                </a>
+                <a href="https://docs.google.com/document/d/1lsQDxMilVhyr74wi8-L8z0LFO2RKWmcNqZ0KKySc7UU/edit?usp=sharing" class="project-link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf"></i> Report
+                </a>
+            </div>
         </div>
 
-        <div class="project-card" data-github="https://github.com/Aplex-Tech/EduSpark" data-report="https://docs.google.com/document/d/1MLoAkz4dnY1n1fW2TwwLTPd924zLVeMF/edit?usp=sharing&ouid=111496140596058989797&rtpof=true&sd=true">
+        <div class="project-card">
             <div class="project-card-image">
                 <img src="project/eduspark.png" alt="Computer Science Education Web Apps">
             </div>
@@ -1341,9 +1203,17 @@
                     Built a full-stack education web application for secondary school CS students. I was in charged of the Quiz Module and also one of the developers responsible for module integration and DB management.
                 </div>
             </div>
+            <div class="project-card-footer">
+                <a href="https://github.com/Aplex-Tech/EduSpark" class="project-link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-code-branch"></i> GitHub
+                </a>
+                <a href="https://docs.google.com/document/d/1MLoAkz4dnY1n1fW2TwwLTPd924zLVeMF/edit?usp=sharing&ouid=111496140596058989797&rtpof=true&sd=true" class="project-link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf"></i> Report
+                </a>
+            </div>
         </div>
 
-        <div class="project-card" data-github="https://github.com/nguyuling/Bioinformatics">
+        <div class="project-card">
             <div class="project-card-image">
                 <img src="project/bioinfo-streamlit.png" alt="Computational Biology Tools">
             </div>
@@ -1358,36 +1228,17 @@
                 </div>
                 <div class="project-description">
                     Built a computional biology interface for data visualization of the Leukemia Classification project.
-            </div>
-        </div>
-    </div>
-    
-    <!-- Project Modal -->
-    <div id="projectModal" class="project-modal">
-        <div class="project-modal-overlay"></div>
-        <div class="project-modal-content">
-            <button class="project-modal-close">&times;</button>
-            <div class="project-modal-body">
-                <div id="modalProjectTags" class="project-tags"></div>
-                <div class="project-modal-header">
-                    <h2 id="modalProjectTitle"></h2>
                 </div>
-                <div id="modalProjectInstitution" class="project-institution"></div>
-                <div class="project-modal-image">
-                    <img id="modalProjectImage" src="" alt="Project Image">
-                </div>
-                <div id="modalProjectDescription" class="project-description"></div>
             </div>
-            <div class="project-modal-footer">
-                <a id="modalGithubLink" class="project-link-button" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-code-branch"></i> GitHub Repo
-                </a>
-                <a id="modalReportLink" class="project-link-button" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-file-pdf"></i> Project Report
+            <div class="project-card-footer">
+                <a href="https://github.com/nguyuling/Bioinformatics" class="project-link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-code-branch"></i> GitHub
                 </a>
             </div>
         </div>
     </div>
+</section>
+
 </section>
 
 <section id="education" style="padding: 60px 10%;">
@@ -1657,79 +1508,6 @@
             }
         });
         // Gallery uses CSS Grid - no Masonry needed
-    });
-
-    // Project Modal Functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const projectCards = document.querySelectorAll('.project-card');
-        const projectModal = document.getElementById('projectModal');
-        const modalClose = document.querySelector('.project-modal-close');
-        const modalOverlay = document.querySelector('.project-modal-overlay');
-
-        projectCards.forEach(card => {
-            card.addEventListener('click', function(e) {
-                e.stopPropagation();
-                openProjectModal(this);
-            });
-        });
-
-        function openProjectModal(card) {
-            const title = card.querySelector('.project-card-header h4').textContent;
-            const institution = card.querySelector('.project-institution').textContent;
-            const description = card.querySelector('.project-description').textContent;
-            const tagsHTML = card.querySelector('.project-tags').innerHTML;
-            const githubLink = card.dataset.github;
-            const reportLink = card.dataset.report;
-            const imageElement = card.querySelector('.project-card-image img');
-            const imageSrc = imageElement ? imageElement.src : '';
-            const imageAlt = imageElement ? imageElement.alt : '';
-
-            document.getElementById('modalProjectTitle').textContent = title;
-            document.getElementById('modalProjectInstitution').textContent = institution;
-            document.getElementById('modalProjectDescription').textContent = description;
-            document.getElementById('modalProjectTags').innerHTML = tagsHTML;
-            
-            const modalImage = document.getElementById('modalProjectImage');
-            if (imageSrc) {
-                modalImage.src = imageSrc;
-                modalImage.alt = imageAlt;
-            }
-            
-            const githubBtn = document.getElementById('modalGithubLink');
-            const reportBtn = document.getElementById('modalReportLink');
-
-            if (githubLink) {
-                githubBtn.href = githubLink;
-                githubBtn.style.display = 'inline-flex';
-            } else {
-                githubBtn.style.display = 'none';
-            }
-
-            if (reportLink) {
-                reportBtn.href = reportLink;
-                reportBtn.style.display = 'inline-flex';
-            } else {
-                reportBtn.style.display = 'none';
-            }
-
-            projectModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeProjectModal() {
-            projectModal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        modalClose.addEventListener('click', closeProjectModal);
-        modalOverlay.addEventListener('click', closeProjectModal);
-
-        // Close modal on Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && projectModal.classList.contains('active')) {
-                closeProjectModal();
-            }
-        });
     });
 </script>
 
