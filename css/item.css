@@ -60,10 +60,7 @@
 }
 
 .item:hover {
-    transform: translateX(10px) translateY(-5px);
-    box-shadow: 0 8px 25px rgba(252, 191, 73, 0.2);
-    padding: 25px;
-    padding-left: 25px;
+    transform: translateY(-15px);
 }
 
 .item-date { 

@@ -18,7 +18,7 @@ body {
 
 /* Section */
 section { 
-    padding: 60px 10%; 
+    padding: 50px 10%; 
     background: var(--dark-bg);
     text-align: center;
 }
@@ -29,7 +29,7 @@ h3 {
     transition: all 0.3s ease;
     cursor: default;
     color: var(--white);
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     letter-spacing: 1.2px;
 }
 
