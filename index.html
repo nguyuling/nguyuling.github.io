@@ -586,9 +586,7 @@
             border: 1px solid rgba(252, 191, 73, 0.2);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             position: relative;
-            min-height: 250px;
-            display: flex;
-            align-items: stretch;
+            aspect-ratio: 1 / 1;
         }
 
         .experience-item .alt-label {
@@ -617,7 +615,6 @@
             display: block;
             object-fit: cover;
             transition: transform 0.3s ease;
-            flex: 1;
         }
 
         .experience-item:hover {
@@ -980,6 +977,318 @@
 
         footer {
             animation: fadeInUp 0.8s ease-out 0.5s both;
+        }
+
+        /* ===== MOBILE RESPONSIVE DESIGN ===== */
+
+        /* Tablet: 768px and below */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 3%;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+                font-size: 1.2rem;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+
+            .hero {
+                flex-direction: column;
+                padding: 40px 5%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-img img {
+                width: 200px;
+                height: 200px;
+            }
+
+            section {
+                padding: 40px 5%;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                letter-spacing: 0.8px;
+            }
+
+            .projects-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .certification-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .experience-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            #education .items-container {
+                flex-direction: column;
+                padding-top: 0;
+            }
+
+            #education .items-container::before {
+                display: none;
+            }
+
+            #education .item {
+                border-right: none;
+                border-bottom: 1px solid rgba(252, 191, 73, 0.2);
+                padding: 20px;
+                text-align: left;
+            }
+
+            #education .item:last-child {
+                border-bottom: none;
+            }
+
+            #education .item::before,
+            #education .item::after {
+                display: none;
+            }
+
+            #cocurriculum .items-container {
+                flex-direction: column;
+                padding-top: 0;
+            }
+
+            #cocurriculum .items-container::before {
+                display: none;
+            }
+
+            #cocurriculum .item {
+                border-right: none;
+                border-bottom: 1px solid rgba(252, 191, 73, 0.2);
+                padding: 20px;
+                text-align: left;
+            }
+
+            #cocurriculum .item:last-child {
+                border-bottom: none;
+            }
+
+            #cocurriculum .item::before,
+            #cocurriculum .item::after {
+                display: none;
+            }
+
+            .project-card-header h4,
+            .certification-card-header h4 {
+                font-size: 0.9rem;
+            }
+
+            .project-description {
+                font-size: 0.75rem;
+            }
+
+            .social-links a {
+                font-size: 1.2rem;
+                margin: 0 5px;
+            }
+
+            footer {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Mobile: 480px and below */
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            nav {
+                padding: 0.8rem 2%;
+                gap: 0.5rem;
+            }
+
+            .logo {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            nav a {
+                margin-left: 5px;
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                padding: 30px 4%;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+                margin-bottom: 5px;
+            }
+
+            .hero h2 {
+                font-size: 0.9rem;
+            }
+
+            .hero p {
+                font-size: 0.85rem;
+            }
+
+            .hero a {
+                font-size: 0.8rem;
+                padding: 8px 16px;
+            }
+
+            .hero-img img {
+                width: 150px;
+                height: 150px;
+                border-width: 3px;
+            }
+
+            section {
+                padding: 30px 4%;
+            }
+
+            h3 {
+                font-size: 1rem;
+                letter-spacing: 0.5px;
+            }
+
+            .projects-container {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .certification-container {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .experience-gallery {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .experience-item {
+                aspect-ratio: 16 / 9;
+            }
+
+            .project-card-header h4,
+            .certification-card-header h4 {
+                font-size: 0.8rem;
+            }
+
+            .project-card-content,
+            .certification-card-content {
+                padding: 10px;
+            }
+
+            .project-tag,
+            .certification-tag {
+                font-size: 0.5rem;
+                padding: 4px 8px;
+            }
+
+            .project-date,
+            .certification-info {
+                font-size: 0.7rem;
+            }
+
+            .project-institution {
+                font-size: 0.7rem;
+                margin-bottom: 10px;
+            }
+
+            .project-description {
+                font-size: 0.7rem;
+            }
+
+            .item {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .item-title {
+                font-size: 1rem;
+            }
+
+            .item-institution {
+                font-size: 0.7rem;
+            }
+
+            .item-date {
+                font-size: 0.75rem;
+                margin-top: -10px;
+                margin-bottom: 8px;
+            }
+
+            .project-modal-header h2 {
+                font-size: 1.2rem;
+            }
+
+            .project-modal-body {
+                gap: 10px;
+            }
+
+            .project-modal-image {
+                max-height: 200px;
+            }
+
+            .project-link-button {
+                padding: 10px 20px;
+                font-size: 0.65rem;
+                gap: 5px;
+            }
+
+            .project-link-button i {
+                font-size: 0.8rem;
+            }
+
+            .social-links a {
+                font-size: 1rem;
+                margin: 0 3px;
+            }
+
+            footer {
+                padding: 20px 15px;
+            }
+
+            footer p {
+                font-size: 0.75rem;
+            }
+
+            .alt-label {
+                font-size: 0.5rem;
+                padding: 5px;
+            }
+        }
+
+        /* Landscape mobile: 480px width, 800px height (usually landscape phone) */
+        @media (max-width: 800px) and (max-height: 500px) {
+            .hero {
+                padding: 20px 4%;
+            }
+
+            .hero-img {
+                display: none;
+            }
+
+            section {
+                padding: 25px 4%;
+            }
+
+            h3 {
+                font-size: 0.95rem;
+            }
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
@@ -1365,55 +1674,7 @@
                 item.appendChild(label);
             }
         });
-        
-        var images = gallery.querySelectorAll('img');
-        var loadedCount = 0;
-        var masonryInitialized = false;
-        
-        function initMasonry() {
-            if (masonryInitialized) return;
-            masonryInitialized = true;
-            
-            var msnry = new Masonry(gallery, {
-                itemSelector: '.experience-item',
-                columnWidth: '.experience-item',
-                percentPosition: true,
-                gutter: 20
-            });
-        }
-        
-        // Initialize when all images load
-        images.forEach(function(img) {
-            img.addEventListener('load', function() {
-                loadedCount++;
-                if (loadedCount === images.length) {
-                    initMasonry();
-                }
-            });
-            
-            img.addEventListener('error', function() {
-                loadedCount++;
-                if (loadedCount === images.length) {
-                    initMasonry();
-                }
-            });
-            
-            // Handle already cached images
-            if (img.complete) {
-                loadedCount++;
-                if (loadedCount === images.length) {
-                    setTimeout(initMasonry, 50);
-                }
-            }
-        });
-        
-        // Fallback: Initialize after 3 seconds if images haven't loaded
-        setTimeout(function() {
-            if (!masonryInitialized) {
-                console.warn('Masonry initialization fallback triggered');
-                initMasonry();
-            }
-        }, 3000);
+        // Gallery uses CSS Grid - no Masonry needed
     });
 
     // Project Modal Functionality
