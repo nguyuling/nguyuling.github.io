@@ -24,7 +24,7 @@
             background-color: var(--dark-bg);
         }
 
-        /* Navigation */
+    /* Navigation */
         nav {
             background: var(--dark-bg);
             padding: 1rem 5%;
@@ -59,6 +59,10 @@
             position: relative;
         }
 
+        nav a:hover {
+            color: var(--yellow);
+        }
+
         nav a::after {
             content: '';
             position: absolute;
@@ -74,11 +78,7 @@
             width: 100%;
         }
 
-        nav a:hover {
-            color: var(--yellow);
-        }
-
-        /* Hero Section */
+    /* Hero Section */
         .hero {
             display: flex;
             align-items: center;
@@ -87,6 +87,7 @@
         }
 
         .hero-text { flex: 1; }
+
         .hero-img { flex: 1; text-align: center; }
         
         .hero-img img {
@@ -106,12 +107,6 @@
         .hero h1 { 
             font-size: 3rem; 
             color: var(--white);
-        }
-        
-        .hero h2 { 
-            color: var(--yellow); 
-            font-weight: 400; 
-            margin-top: 0;
         }
 
         .hero a {
@@ -143,7 +138,7 @@
             box-shadow: 0 10px 25px rgba(252, 191, 73, 0.3);
         }
 
-        /* Section Styling */
+        /* Section */
         section { 
             padding: 60px 10%; 
             background: var(--dark-bg);
@@ -151,7 +146,6 @@
         }
         
         h3 {
-             
             text-transform: uppercase;
             display: inline-block; 
             transition: all 0.3s ease;
@@ -166,23 +160,16 @@
             padding-bottom: 5px;
         }
 
-
-
-        /* Items Container */
+    /* Education & Co-curriculum Sections */
         .items-container {
             display: flex;
-            flex-direction: column;
             gap: 20px;
-        }
-
-        #education .items-container {
             flex-direction: row;
-            gap: 0;
             position: relative;
             padding-top: 40px;
         }
 
-        #education .items-container::before {
+        .items-container::before {
             content: '';
             position: absolute;
             top: 0;
@@ -192,155 +179,72 @@
             background: linear-gradient(90deg, var(--yellow) 0%, rgba(252, 191, 73, 0.3) 100%);
         }
 
-        /* Education Timeline */
-        #education .item { 
-            margin-bottom: 0;
-            transition: all 0.3s ease;
-            padding: 25px;
-            padding-left: 25px;
-            border-radius: 0;
-            background: transparent;
-            border: none;
-            border-right: 1px solid rgba(252, 191, 73, 0.2);
-            box-shadow: none;
-            position: relative;
-            flex: 1;
-            text-align: center;
-        }
-
-        #education .item:first-child {
-            flex: 1.8;
-        }
-
-        #education .item::before {
-            content: '';
-            position: absolute;
-            top: -40px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 40px;
-            background: var(--yellow);
-        }
-
-        #education .item::after {
-            content: '';
-            position: absolute;
-            top: -44px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--yellow);
-            border: 2px solid var(--dark-bg);
-            box-shadow: 0 0 0 2px var(--yellow);
-        }
-
-        #education .item:last-child {
-            border-right: none;
-        }
-
-        #education .item:hover {
-            transform: translateY(-5px);
-            box-shadow: none;
-            padding: 25px;
-            padding-left: 25px;
-        }
-
-        /* Co-curriculum Timeline */
-        #cocurriculum .items-container {
-            flex-direction: row;
-            gap: 0;
-            position: relative;
-            padding-top: 40px;
-        }
-
-        #cocurriculum .items-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--yellow) 0%, rgba(252, 191, 73, 0.3) 100%);
-        }
-
-        #cocurriculum .item {
-            margin-bottom: 0;
-            transition: all 0.3s ease;
-            padding: 25px;
-            padding-left: 25px;
-            border-radius: 0;
-            background: transparent;
-            border: none;
-            border-right: 1px solid rgba(252, 191, 73, 0.2);
-            box-shadow: none;
-            position: relative;
-            flex: 1;
-            text-align: center;
-        }
-
-        #cocurriculum .item::before {
-            content: '';
-            position: absolute;
-            top: -40px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 40px;
-            background: var(--yellow);
-        }
-
-        #cocurriculum .item::after {
-            content: '';
-            position: absolute;
-            top: -44px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--yellow);
-            border: 2px solid var(--dark-bg);
-            box-shadow: 0 0 0 2px var(--yellow);
-        }
-
-        #cocurriculum .item:last-child {
-            border-right: none;
-        }
-
-        #cocurriculum .item:hover {
-            transform: translateY(-5px);
-            box-shadow: none;
-            padding: 25px;
-            padding-left: 25px;
-        }
-
-        /* Card-based items for other sections */
         .item { 
-            margin-bottom: 20px;
+            margin-bottom: 0;
             transition: all 0.3s ease;
-            padding: 20px;
-            border-radius: 12px;
-            background: var(--card-bg);
-            border-left: 5px solid var(--yellow);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            padding: 25px;
+            padding-left: 25px;
+            border-radius: 0;
+            background: transparent;
+            border: none;
+            border-right: 1px solid rgba(252, 191, 73, 0.2);
+            box-shadow: none;
+            position: relative;
+            flex: 1;
+            text-align: center;
+        }
+
+        .item::before, .item::after {
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            position: absolute;
+            background: var(--yellow);
+        }
+
+        .item::before {
+            top: -40px;
+            width: 2px;
+            height: 40px;
+        }
+
+        .item::after {
+            top: -44px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid var(--dark-bg);
+            box-shadow: 0 0 0 2px var(--yellow);
+        }
+
+        .item:last-child {
+            border-right: none;
         }
 
         .item:hover {
-            transform: translateX(10px);
+            transform: translateX(10px) translateY(-5px);
             box-shadow: 0 8px 25px rgba(252, 191, 73, 0.2);
+            padding: 25px;
+            padding-left: 25px;
+        }
+
+        .item-date { 
+            font-size: 0.85rem; 
+            color: var(--text-light-gray);
+            margin-top: -15px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #FFFFFF;
         }
 
         .item-title { 
             font-weight: 700; 
             color: var(--yellow); 
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 5px;
         }
         
-        .item-topic { 
+        .item-description { 
             font-size: 0.9rem; 
             color: var(--text-light-gray); 
         }
@@ -356,49 +260,16 @@
             color: var(--yellow);
         }
 
-        .item-grade { 
-            font-size: 0.95rem; 
-            color: var(--text-light-gray); 
-            font-weight: 500; 
-            margin: 5px 0;
-        }
-        
-        .item-date { 
-            font-size: 0.85rem; 
-            color: var(--text-light-gray);
-            margin-top: -15px;
-            margin-bottom: 10px;
-            font-weight: 500;
-            color: #FFFFFF;
-        }
-        
-        .item ul {
-            margin: 10px 0;
-            padding-left: 25px;
-        }
-
-        .item li {
-            margin: 8px 0;
-            color: var(--text-light-gray);
-            transition: all 0.2s ease;
-        }
-
-        .item li:hover {
-            color: var(--yellow);
-            padding-left: 8px;
-        }
-
-        /* Projects Container */
-        .projects-container {
+    /* Projects & Certification Section */
+        .card-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: auto;
             gap: 20px;
             margin-top: 10px;
+            opacity: 0;
+            animation: scaleIn 0.6s ease-out forwards;
         }
 
-        .project-card,
-        .certification-card {
+        .card {
             background: var(--card-bg);
             border-radius: 12px;
             overflow: hidden;
@@ -411,8 +282,17 @@
             height: fit-content;
         }
 
-        .project-card-header,
-        .certification-card-header {
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 40px rgba(252, 191, 73, 0.25);
+            border-color: var(--yellow);
+        }
+
+        .card:hover .card-header {
+            background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
+        }
+
+        .card-header {
             background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
             padding: 20px;
             border-bottom: 2px solid var(--yellow);
@@ -421,8 +301,7 @@
             justify-content: center;
         }
 
-        .project-card-header h4,
-        .certification-card-header h4 {
+        .card-header h4{
             color: var(--yellow);
             font-size: 0.8rem;
             font-weight: 700;
@@ -431,37 +310,24 @@
             font-size: 1rem;
         }
 
-        .project-card-content,
-        .certification-card-content {
+        .card-content {
             padding: 15px;
             text-align: justify;
-        }
-
-        .certification-card-content {
-            display: flex;
             flex-direction: column;
-        }
-        .project-tags {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px 8px;
-            margin-bottom: 15px;
-            justify-content: center;
         }
 
-        .certification-tags {
+        .card-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 15px;
             justify-content: center;
         }
 
-        .project-tag,
-        .certification-tag {
+        .card-tag {
             background: rgba(252, 191, 73, 0.15);
             color: var(--yellow);
-            padding: 6px 14px;
+            padding: 3px 6px;
             border-radius: 20px;
             font-size: 0.6rem;
             border: 1px solid rgba(252, 191, 73, 0.3);
@@ -471,43 +337,21 @@
             font-family: JetBrains Mono, monospace;
         }
 
-        .project-date,
-        .certification-info {
-            font-size: 0.8rem;
-            color: #FFFFFF;
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-
-        .project-institution {
+        .card-info {
             font-size: 0.8rem;
             color: var(--white);
             text-align: center;
             margin-bottom: 15px;
-            text-transform: uppercase;
         }
 
-        .project-description {
+        .card-description {
             color: var(--text-light-gray);
             line-height: 1.5;
             font-size: 0.8rem;
+            margin-top: 15px;
         }
 
-        .project-card:hover,
-        .certification-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 15px 40px rgba(252, 191, 73, 0.25);
-            border-color: var(--yellow);
-        }
-
-        .project-card:hover .project-card-header,
-        .certification-card:hover .certification-card-header {
-            background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
-        }
-
-        /* Project Card Image */
-        .project-card-image, .certification-card-image {
+        .card-image {
             background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
             display: flex;
             align-items: center;
@@ -516,7 +360,7 @@
             overflow: hidden;
         }
 
-        .project-card-image img, .certification-card-image img {
+        .card-image img {
             width: 100%;
             height: auto;
             object-fit: contain;
@@ -524,34 +368,9 @@
             transition: transform 0.3s ease;
         }
 
-        .project-card:hover .project-card-image img {
+        .card:hover .card-image img {
             transform: scale(1.08);
         }
-
-        /* Certification Cards Container */
-        .certification-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-top: 10px;
-        }
-
-        .certification-card:hover .certification-card-image img {
-            transform: scale(1.1);
-        }
-
-        /* Certification Card Animations */
-        .certification-card {
-            opacity: 0;
-            animation: scaleIn 0.6s ease-out forwards;
-        }
-
-        .certification-container > .certification-card:nth-child(1) { animation-delay: 0.2s; }
-        .certification-container > .certification-card:nth-child(2) { animation-delay: 0.3s; }
-        .certification-container > .certification-card:nth-child(3) { animation-delay: 0.4s; }
-        .certification-container > .certification-card:nth-child(4) { animation-delay: 0.5s; }
-        .certification-container > .certification-card:nth-child(5) { animation-delay: 0.6s; }
-        .certification-container > .certification-card:nth-child(6) { animation-delay: 0.7s; }
 
         footer {
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
@@ -601,10 +420,6 @@
             z-index: 2;
         }
 
-        .experience-item:hover .alt-label {
-            opacity: 0;
-        }
-
         .experience-item img {
             width: 100%;
             height: 100%;
@@ -642,7 +457,7 @@
             filter: brightness(1.2);
         }
 
-        /* On Load Animations */
+    /* On Load Animations */
         html {
             scroll-behavior: smooth;
         }
@@ -746,53 +561,38 @@
             animation-delay: 0.5s;
         }
 
-
-
-        .project-card {
+        .card {
             opacity: 0;
             animation: scaleIn 0.6s ease-out forwards;
             cursor: pointer;
         }
 
-        .projects-container > .project-card:nth-child(1) { animation-delay: 0.3s; }
-        .projects-container > .project-card:nth-child(2) { animation-delay: 0.4s; }
-        .projects-container > .project-card:nth-child(3) { animation-delay: 0.5s; }
-
-        /* Project Card Styles */
-        .project-card-footer {
+        .card-footer {
             display: flex;
-            gap: 10px;
-            padding: 15px;
-            border-top: 1px solid rgba(252, 191, 73, 0.2);
+            gap: 8px;
+            padding-bottom: 15px;
             justify-content: center;
             flex-wrap: wrap;
-            background: rgba(0, 0, 0, 0.2);
         }
 
-        .project-link-button {
+        .card-link-button {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 12px 28px;
+            padding: 0px 14px;
             background: transparent;
-            color: var(--yellow);
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
+            color: var(--text-light-gray);
             transition: all 0.3s ease;
-            border: 2px solid var(--yellow);
             font-size: 0.7rem;
             font-family: JetBrains Mono, monospace;
         }
 
-        .project-link-button:hover {
-            background: rgba(252, 191, 73, 0.1);
-            box-shadow: 0 0 15px rgba(252, 191, 73, 0.3);
+        .card-link-button:hover {
             border-color: #FFD700;
             color: #FFD700;
         }
 
-        .project-link-button i {
+        .card-link-button i {
             font-size: 1rem;
         }
 
@@ -829,8 +629,7 @@
             animation: fadeInUp 0.8s ease-out 0.5s both;
         }
 
-        /* ===== MOBILE RESPONSIVE DESIGN ===== */
-
+    /* Mobile Responsiveness */
         /* Tablet: 768px and below */
         @media (max-width: 768px) {
             nav {
@@ -867,12 +666,7 @@
                 letter-spacing: 0.8px;
             }
 
-            .projects-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-
-            .certification-container {
+            .card-container {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 15px;
             }
@@ -882,40 +676,18 @@
                 gap: 15px;
             }
 
-            #education .items-container {
-                flex-direction: column;
-                padding-top: 0;
-            }
-
-            #education .items-container::before {
-                display: none;
-            }
-
-            #education .item {
-                border-right: none;
-                border-bottom: 1px solid rgba(252, 191, 73, 0.2);
-                padding: 20px;
-                text-align: left;
-            }
-
-            #education .item:last-child {
-                border-bottom: none;
-            }
-
-            #education .item::before,
-            #education .item::after {
-                display: none;
-            }
-
+            #education .items-container,
             #cocurriculum .items-container {
                 flex-direction: column;
                 padding-top: 0;
             }
 
+            #education .items-container::before,
             #cocurriculum .items-container::before {
                 display: none;
             }
 
+            #education .item,
             #cocurriculum .item {
                 border-right: none;
                 border-bottom: 1px solid rgba(252, 191, 73, 0.2);
@@ -923,16 +695,19 @@
                 text-align: left;
             }
 
+            #education .item:last-child,
             #cocurriculum .item:last-child {
                 border-bottom: none;
             }
 
+            #education .item::before,
+            #education .item::after,
             #cocurriculum .item::before,
             #cocurriculum .item::after {
                 display: none;
             }
 
-            .project-description {
+            .card-description {
                 font-size: 0.75rem;
             }
 
@@ -971,10 +746,6 @@
                 padding: 30px 4%;
             }
 
-            .hero h2 {
-                font-size: 0.9rem;
-            }
-
             .hero p {
                 font-size: 0.85rem;
             }
@@ -999,12 +770,7 @@
                 letter-spacing: 0.5px;
             }
 
-            .projects-container {
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
-
-            .certification-container {
+            .card-container {
                 grid-template-columns: 1fr;
                 gap: 12px;
             }
@@ -1018,28 +784,19 @@
                 aspect-ratio: 16 / 9;
             }
 
-            .project-card-content,
-            .certification-card-content {
-                padding: 10px;
-            }
-
-            .project-tag,
-            .certification-tag {
-                font-size: 0.5rem;
-                padding: 4px 8px;
-            }
-
-            .project-date,
-            .certification-info {
-                font-size: 0.7rem;
-            }
-
-            .project-institution {
+            .card-info {
                 font-size: 0.7rem;
                 margin-bottom: 10px;
             }
 
-            .project-description {
+            .card-tag {
+                font-size: 0.5rem;
+                padding: 4px 8px;
+            }
+
+
+
+            .card-description {
                 font-size: 0.7rem;
             }
 
@@ -1062,10 +819,6 @@
                 margin-bottom: 8px;
             }
 
-            .project-modal-header h2 {
-                font-size: 1.2rem;
-            }
-
             .project-modal-body {
                 gap: 10px;
             }
@@ -1074,13 +827,13 @@
                 max-height: 200px;
             }
 
-            .project-link-button {
+            .card-link-button {
                 padding: 10px 20px;
                 font-size: 0.65rem;
                 gap: 5px;
             }
 
-            .project-link-button i {
+            .card-link-button i {
                 font-size: 0.8rem;
             }
 
@@ -1125,6 +878,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
 </head>
+
 <body>
 
 <nav>
@@ -1140,12 +894,12 @@
 <header class="hero">
     <div class="hero-text">
         <h1>Hi, I'm Yuling</h1>
-        <div class="project-tags" style="justify-content: flex-start; margin: 20px 0;">
-            <span class="project-tag">Computer Science</span>
-            <span class="project-tag">Bioinformatics</span>
-            <span class="project-tag">Cancer Genomics</span>
-            <span class="project-tag">Machine Learning</span>
-            <span class="project-tag">Spanish</span>
+        <div class="card-tags" style="justify-content: flex-start; margin: 20px 0;">
+            <span class="card-tag">Computer Science</span>
+            <span class="card-tag">Bioinformatics</span>
+            <span class="card-tag">Cancer Genomics</span>
+            <span class="card-tag">Machine Learning</span>
+            <span class="card-tag">Spanish</span>
         </div>
         <a href="mailto:nguyuling@gmail.com" style="background: var(--yellow); color: black; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Get In Touch</a>
     </div>
@@ -1156,82 +910,82 @@
 
 <section id="projects">
     <h3 style="border-bottom: 2px solid var(--yellow)";>Projects & Work</h3>
-    <div class="projects-container">
-        <div class="project-card">
-            <div class="project-card-image">
+    <div class="card-container" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="card">
+            <div class="card-image">
                 <img src="project/leukemia-classification.png" alt="Leukemia Classification Prediction">
             </div>
-            <div class="project-card-header">
+            <div class="card-header">
                 <h4>Leukemia Classification Prediction</h4>
             </div>
-            <div class="project-card-content">
-                <div class="project-institution">Programming for Bioinformatics, 2025</div>
-                <div class="project-tags">
-                    <span class="project-tag">Python</span>
-                    <span class="project-tag">Machine Learning</span>
+            <div class="card-content">
+                <div class="card-info">Programming for Bioinformatics, 2025</div>
+                <div class="card-tags">
+                    <span class="card-tag">Python</span>
+                    <span class="card-tag">Machine Learning</span>
                 </div>
-                <div class="project-description">
+                <div class="card-description">
                     Utilized various Python libraires to develop & compare several ML models for leukemia classification (AML/ALL/CML/CLL) using gene expresion data from GEO.
                 </div>
             </div>
-            <div class="project-card-footer">
-                <a href="https://github.com/nguyuling/Leukemia-Diagnosis" class="project-link-button" target="_blank" rel="noopener noreferrer">
+            <div class="card-footer">
+                <a href="https://github.com/nguyuling/Leukemia-Diagnosis" class="card-link-button" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-code-branch"></i> GitHub
                 </a>
-                <a href="https://docs.google.com/document/d/1lsQDxMilVhyr74wi8-L8z0LFO2RKWmcNqZ0KKySc7UU/edit?usp=sharing" class="project-link-button" target="_blank" rel="noopener noreferrer">
+                <a href="https://docs.google.com/document/d/1lsQDxMilVhyr74wi8-L8z0LFO2RKWmcNqZ0KKySc7UU/edit?usp=sharing" class="card-link-button" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-file-pdf"></i> Report
                 </a>
             </div>
         </div>
 
-        <div class="project-card">
-            <div class="project-card-image">
+        <div class="card">
+            <div class="card-image">
                 <img src="project/eduspark.png" alt="Computer Science Education Web Apps">
             </div>
-            <div class="project-card-header">
+            <div class="card-header">
                 <h4>Computer Science Education Web Apps</h4>
             </div>
-            <div class="project-card-content">
-                <div class="project-institution">Application Development, 2025</div>
-                <div class="project-tags">
-                    <span class="project-tag">Laravel</span>
-                    <span class="project-tag">Version Control</span>
-                    <span class="project-tag">DB Management</span>
-                    <span class="project-tag">Apps Deployment</span>
+            <div class="card-content">
+                <div class="card-info">Application Development, 2025</div>
+                <div class="card-tags">
+                    <span class="card-tag">Laravel</span>
+                    <span class="card-tag">Version Control</span>
+                    <span class="card-tag">DB Management</span>
+                    <span class="card-tag">Apps Deployment</span>
                 </div>
-                <div class="project-description">
+                <div class="card-description">
                     Built a full-stack education web application for secondary school CS students. I was in charged of the Quiz Module and also one of the developers responsible for module integration and DB management.
                 </div>
             </div>
-            <div class="project-card-footer">
-                <a href="https://github.com/Aplex-Tech/EduSpark" class="project-link-button" target="_blank" rel="noopener noreferrer">
+            <div class="card-footer">
+                <a href="https://github.com/Aplex-Tech/EduSpark" class="card-link-button" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-code-branch"></i> GitHub
                 </a>
-                <a href="https://docs.google.com/document/d/1MLoAkz4dnY1n1fW2TwwLTPd924zLVeMF/edit?usp=sharing&ouid=111496140596058989797&rtpof=true&sd=true" class="project-link-button" target="_blank" rel="noopener noreferrer">
+                <a href="https://docs.google.com/document/d/1MLoAkz4dnY1n1fW2TwwLTPd924zLVeMF/edit?usp=sharing&ouid=111496140596058989797&rtpof=true&sd=true" class="card-link-button" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-file-pdf"></i> Report
                 </a>
             </div>
         </div>
 
-        <div class="project-card">
-            <div class="project-card-image">
+        <div class="card">
+            <div class="card-image">
                 <img src="project/bioinfo-streamlit.png" alt="Computational Biology Tools">
             </div>
-            <div class="project-card-header">
+            <div class="card-header">
                 <h4>Computational Biology Tools</h4>
             </div>
-            <div class="project-card-content">
-                <div class="project-institution">Bioinformatics II, 2026</div>
-                <div class="project-tags">
-                    <span class="project-tag">Streamlit</span>
-                    <span class="project-tag">Data Visualization</span>
+            <div class="card-content">
+                <div class="card-info">Bioinformatics II, 2026</div>
+                <div class="card-tags">
+                    <span class="card-tag">Streamlit</span>
+                    <span class="card-tag">Data Visualization</span>
                 </div>
-                <div class="project-description">
+                <div class="card-description">
                     Built a computional biology interface for data visualization of the Leukemia Classification project.
                 </div>
             </div>
-            <div class="project-card-footer">
-                <a href="https://github.com/nguyuling/Bioinformatics" class="project-link-button" target="_blank" rel="noopener noreferrer">
+            <div class="card-footer">
+                <a href="https://github.com/nguyuling/Bioinformatics" class="card-link-button" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-code-branch"></i> GitHub
                 </a>
             </div>
@@ -1239,140 +993,138 @@
     </div>
 </section>
 
-</section>
-
 <section id="education" style="padding: 60px 10%;">
     <h3>Education</h3>
     <div class="items-container">
-        <div class="item">
+        <div class="item" style="flex: 1.8;">
             <div class="item-date">2023 - 2027</div>
             <div class="item-title">B.S. Computer Science (Bioinformatics)</div>
             <div class="item-institution">Universiti Teknologi Malaysia</div>
-            <div class="item-topic">Dean's List. CGPA 3.78</div>
+            <div class="item-description">Dean's List. CGPA 3.78</div>
         </div>
         <div class="item">
             <div class="item-date">2021 - 2023</div>
             <div class="item-title">STPM</div>
             <div class="item-institution">SABS Kuantan</div>
-            <div class="item-topic">Life Science. CGPA 3.75</div>
+            <div class="item-description">Life Science. CGPA 3.75</div>
         </div>
         <div class="item">
             <div class="item-date">2016 - 2021</div>
             <div class="item-title">SPM</div>
             <div class="item-institution">SMK Rompin</div>
-            <div class="item-topic">Pure Science. 10As</div>
+            <div class="item-description">Pure Science. 10As</div>
         </div>
     </div>
 </section>
 
 <section id="certification" style="padding: 60px 10%;">
     <h3 style="border-bottom: 2px solid var(--yellow)";>Certification & Awards</h3>
-    <div class="certification-container">
-        <div class="certification-card">
-            <div class="certification-card-image">
+    <div class="card-container" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="card">
+            <div class="card-image">
                 <img src="certification/python-essential-1.pdf" alt="Python for Data Science">
             </div>
-            <div class="certification-card-header">
+            <div class="card-header">
                 <h4>Python for Data Science</h4>
             </div>
-            <div class="certification-card-content">
-                <div class="certification-tags">
-                    <span class="certification-tag">Data Manipulation</span>
+            <div class="card-content">
+                <div class="card-info">Cisco Network Academy, 2026</div>
+                <div class="card-tags">
+                    <span class="card-tag">Data Manipulation</span>
                 </div>
-                <div class="certification-info">Cisco Network Academy, 2026</div>
             </div>
         </div>
 
-        <div class="certification-card">
-            <div class="certification-card-image">
+        <div class="card">
+            <div class="card-image">
                 <img src="certification/introduction-to-mongodb.pdf" alt="Introduction to MongoDB">
             </div>
-            <div class="certification-card-header">
+            <div class="card-header">
                 <h4>Introduction to MongoDB</h4>
             </div>
-            <div class="certification-card-content">
-                <div class="certification-tags">
-                    <span class="certification-tag">Query</span>
-                    <span class="certification-tag">Aggregation</span>
+            <div class="card-content">
+                <div class="card-info">MongoDB, 2026</div>
+                <div class="card-tags">
+                    <span class="card-tag">Query</span>
+                    <span class="card-tag">Aggregation</span>
                 </div>
-                <div class="certification-info">MongoDB, 2026</div>
             </div>
         </div>
 
-        <div class="certification-card">
-            <div class="certification-card-image">
+        <div class="card">
+            <div class="card-image">
                 <img src="certification/overview-of-mongodb.pdf" alt="Overview of MongoDB">
             </div>
-            <div class="certification-card-header">
+            <div class="card-header">
                 <h4>Overview of MongoDB</h4>
             </div>
-            <div class="certification-card-content">
-                <div class="certification-tags">
-                    <span class="certification-tag">MongoDB</span>
-                    <span class="certification-tag">Database</span>
+            <div class="card-content">
+                <div class="card-info">MongoDB, 2026</div>
+                <div class="card-tags">
+                    <span class="card-tag">MongoDB</span>
+                    <span class="card-tag">Database</span>
                 </div>
-                <div class="certification-info">MongoDB, 2026</div>
             </div>
         </div>
 
-        <div class="certification-card">
-            <div class="certification-card-image">
+        <div class="card">
+            <div class="card-image">
                 <img src="certification/data-modeling.pdf" alt="Data Modeling Path">
             </div>
-            <div class="certification-card-header">
+            <div class="card-header">
                 <h4>Data Modeling Path</h4>
             </div>
-            <div class="certification-card-content">
-                <div class="certification-tags">
-                    <span class="certification-tag">NoSQL</span>
-                    <span class="certification-tag">Data Modeling</span>
+            <div class="card-content">
+                <div class="card-info">MongoDB, 2026</div>
+                <div class="card-tags">
+                    <span class="card-tag">NoSQL</span>
+                    <span class="card-tag">Data Modeling</span>
                 </div>
-                <div class="certification-info">MongoDB, 2026</div>
             </div>
         </div>
 
-        <div class="certification-card">
-            <div class="certification-card-image">
+        <div class="card">
+            <div class="card-image">
                 <img src="certification/ml-workspace.png" alt="Explore & Configure the ML Workspace">
             </div>
-            <div class="certification-card-header">
+            <div class="card-header">
                 <h4>Azure ML Workspace</h4>
             </div>
-            <div class="certification-card-content">
-                <div class="certification-tags">
-                    <span class="certification-tag">Machine Learning</span>
+            <div class="card-content">
+                <div class="card-info">Microsoft Learn, 2026</div>
+                <div class="card-tags">
+                    <span class="card-tag">Machine Learning</span>
                 </div>
-                <div class="certification-info">Microsoft Learn, 2026</div>
             </div>
         </div>
 
-        <div class="certification-card">
-            <div class="certification-card-image">
+        <div class="card">
+            <div class="card-image">
                 <img src="certification/python-essential-1.pdf" alt="Python Essential 1">
             </div>
-            <div class="certification-card-header">
+            <div class="card-header">
                 <h4>Python Essential 1</h4>
             </div>
-            <div class="certification-card-content">
-                <div class="certification-tags">
-                    <span class="certification-tag">Python Libraries</span>
+            <div class="card-content">
+                <div class="card-info">Cisco Network Academy, 2025</div>
+                <div class="card-tags">
+                    <span class="card-tag">Python Libraries</span>
                 </div>
-                <div class="certification-info">Cisco Network Academy, 2025</div>
             </div>
         </div>
 
-        <div class="certification-card">
-            <div class="certification-card-image">
+        <div class="card">
+            <div class="card-image">
                 <img src="certification/cloud-foundations.pdf" alt="Cloud Foundations">
             </div>
-            <div class="certification-card-header">
+            <div class="card-header">
                 <h4>Cloud Foundations</h4>
             </div>
-            <div class="certification-card-content">
-                <div class="certification-tags">
-                    <span class="certification-tag">Cloud Computing</span>
+            <div class="card-content">
+                <div class="card-info">AWS, 2025</div>
+                <div class="card-tags">
+                    <span class="card-tag">Cloud Computing</span>
                 </div>
-                <div class="certification-info">AWS, 2025</div>
             </div>
         </div>
 
@@ -1386,26 +1138,26 @@
             <div class="item-date">2024 — 2025</div>
             <div class="item-title">HOD Welfare Department & Faculty Representative</div>
             <div class="item-institution">Student Representative Council (MPP) 2024/2025</div>
-            <div class="project-tags">
-                <span class="project-tag">Student Empowerment</span>
-                <span class="project-tag">Leadership</span>
+            <div class="card-tags">
+                <span class="card-tag">Student Empowerment</span>
+                <span class="card-tag">Leadership</span>
             </div>
         </div>
         <div class="item">
             <div class="item-date">2024 — </div>
             <div class="item-title">Active Member</div>
             <div class="item-institution">Persatuan Mahasiswa Sains Komputer (PERSAKA)</div>
-            <div class="project-tags">
-                <span class="project-tag">AI & Robotics</span>
-                <span class="project-tag">Community</span>
+            <div class="card-tags">
+                <span class="card-tag">AI & Robotics</span>
+                <span class="card-tag">Community</span>
             </div>
         </div>
         <div class="item">
             <div class="item-date">2023 — 2024</div>
             <div class="item-title">Deputy Secretary</div>
             <div class="item-institution">Friends of UTM Library (FOLY) 2023/2024</div>
-            <div class="project-tags">
-                <span class="project-tag">Read & Relax Series</span>
+            <div class="card-tags">
+                <span class="card-tag">Read & Relax Series</span>
             </div>
         </div>
     </div>
