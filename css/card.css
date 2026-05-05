@@ -136,6 +136,7 @@
     transition: all 0.3s ease;
     font-size: 0.7rem;
     font-family: JetBrains Mono, monospace;
+    text-decoration: none;
 }
 
 .card-link-button:hover {
