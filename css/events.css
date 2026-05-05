@@ -74,7 +74,8 @@
     grid-row: 2;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: justify;
+    margin-right: 20px;
 }
 
 .event-position {
@@ -96,7 +97,7 @@
     color: var(--yellow);
     padding: 4px 8px;
     border-radius: 20px;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     border: 1px solid rgba(252, 191, 73, 0.3);
     letter-spacing: 0.3px;
     white-space: nowrap;
