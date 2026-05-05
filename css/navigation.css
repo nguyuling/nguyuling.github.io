@@ -10,7 +10,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(252, 191, 73, 0.2);
+    border-bottom: 0.5px solid rgba(252, 191, 73, 0.2);
 }
 
 .logo {
