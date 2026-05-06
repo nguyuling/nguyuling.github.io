@@ -163,6 +163,8 @@
         padding: 8px 16px;
     }
 
+    .hero-img { margin-right: 0px; }
+
     .hero-img img {
         width: 150px;
         height: 150px;
