@@ -240,6 +240,10 @@
         padding-right: 0;
     }
 
+    .event-position {
+        text-align: center;
+    }
+
     .event-tags {
         justify-content: center;
     }
@@ -270,6 +274,7 @@
 
     .event-position {
         font-size: 0.8rem;
+        text-align: center;
     }
 
     .event-tags {
