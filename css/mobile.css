@@ -31,23 +31,22 @@
         justify-content: center;
     }
 
-    nav .social-links a {
-        font-size: 1rem;
-    }
+    nav .social-links a { font-size: 1rem; }
 
     .hero {
         flex-direction: column-reverse;
         padding: 40px 5%;
     }
 
+    .hero-img { margin-right: 0px; }
+
+
     .hero-img img {
         width: 200px;
         height: 200px;
     }
 
-    section {
-        padding: 40px 5%;
-    }
+    section { padding: 40px 5%; }
 
     h3 {
         font-size: 1.3rem;
@@ -100,18 +99,14 @@
         display: none;
     }
 
-    .card-description {
-        font-size: 0.75rem;
-    }
+    .card-description { font-size: 0.75rem; }
 
     .social-links a {
         font-size: 1.2rem;
         margin: 0 5px;
     }
 
-    footer {
-        padding: 30px 20px;
-    }
+    footer { padding: 30px 20px; }
 }
 
 /* Mobile: 480px and below */
