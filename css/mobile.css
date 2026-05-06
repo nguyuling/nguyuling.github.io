@@ -183,9 +183,12 @@
         gap: 12px;
     }
 
-    #projects .card-container,
-    #certification .card-container {
+    #projects .card-container {
         grid-template-columns: 1fr;
+    }
+
+    #certification .card-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .experience-gallery {
