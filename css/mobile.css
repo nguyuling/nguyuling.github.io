@@ -54,13 +54,8 @@
     }
 
     .card-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 15px;
-    }
-
-    #projects .card-container,
-    #certification .card-container {
-        grid-template-columns: repeat(2, 1fr);
     }
 
     .experience-gallery {
@@ -180,17 +175,14 @@
         letter-spacing: 0.5px;
     }
 
-    .card-container {
+    #projects .card-container {
         grid-template-columns: 1fr;
         gap: 12px;
     }
 
-    #projects .card-container {
-        grid-template-columns: 1fr;
-    }
-
     #certification .card-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .experience-gallery {
