@@ -68,34 +68,28 @@
         gap: 15px;
     }
 
-    #education .items-container,
-    #cocurriculum .items-container {
+    .items-container {
         flex-direction: column;
         padding-top: 0;
     }
 
-    #education .items-container::before,
-    #cocurriculum .items-container::before {
+    .items-container::before {
         display: none;
     }
 
-    #education .item,
-    #cocurriculum .item {
+    .item {
         border-right: none;
         border-bottom: 1px solid rgba(252, 191, 73, 0.2);
         padding: 20px;
-        text-align: left;
+        text-align: center;
     }
 
-    #education .item:last-child,
-    #cocurriculum .item:last-child {
+    .item:last-child {
         border-bottom: none;
     }
 
-    #education .item::before,
-    #education .item::after,
-    #cocurriculum .item::before,
-    #cocurriculum .item::after {
+   .item::before,
+    .item::after {
         display: none;
     }
 
@@ -215,7 +209,7 @@
 
     .item {
         padding: 15px;
-        margin-bottom: 15px;
+        text-align: center;
     }
 
     .item-title {
