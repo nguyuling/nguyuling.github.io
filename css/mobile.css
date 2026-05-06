@@ -10,7 +10,7 @@
     }
 
     .logo {
-        font-size: 1.2rem;
+        font-size: 1rem;
         grid-column: 1;
         grid-row: 1;
         justify-self: start;
@@ -121,7 +121,6 @@
 
     .logo {
         font-size: 1rem;
-        margin-bottom: 0.5rem;
         flex-basis: 100%;
         text-align: center;
     }
