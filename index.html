@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/item.css">
     <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/event.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/mobile.css">
@@ -23,8 +24,10 @@
 <nav>
     <div class="logo">NGU YU LING</div>
     <div class="links">
-        <a href="index.html" class="active">Portfolio</a>
-        <a href="events.html">Events</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certification">Certification</a>
+        <a href="#cocurriculum">Co-curriculum</a>
     </div>
     <div class="social-links">
         <a href="https://www.linkedin.com/in/nguyuling/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -49,10 +52,11 @@
     </div>
 </header>
 
-<div id="projects-container"></div>
+<div id="project-container"></div>
 <div id="education-container"></div>
-<div id="certs-container"></div>
+<div id="cert-container"></div>
 <div id="cocurriculum-container"></div>
+<div id="event-container"></div>
 
 <footer>
     <p style="font-size: 0.8rem; margin-top: 20px;">&copy; 2026 Ngu Yu Ling. Built with GitHub Pages.</p>
@@ -71,10 +75,11 @@
     }
 
     document.addEventListener('DOMContentLoaded', async function() {
-        await loadSection('projects.html', 'projects-container');
+        await loadSection('project.html', 'project-container');
         await loadSection('education.html', 'education-container');
-        await loadSection('certs.html', 'certs-container');
+        await loadSection('cert.html', 'cert-container');
         await loadSection('cocurriculum.html', 'cocurriculum-container');
+        await loadSection('event.html', 'event-container');
 
         const gallery = document.querySelector('.experience-gallery');
         if (gallery) {
