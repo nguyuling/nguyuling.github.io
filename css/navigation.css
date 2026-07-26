@@ -28,8 +28,12 @@ nav {
 
 .links {
     display: flex;
-    gap: 20px;
-    justify-self: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+}
+
+.links a {
+    white-space: nowrap; 
 }
 
 nav a {
